@@ -51,6 +51,10 @@ public class AppEntry {
         return info.packageName;
     }
 
+    public File getApkFile() {
+        return apkFile;
+    }
+
     public String getLabel() {
         return label;
     }

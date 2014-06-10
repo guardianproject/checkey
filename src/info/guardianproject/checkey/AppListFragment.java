@@ -20,7 +20,6 @@ https://developer.android.com/reference/android/content/AsyncTaskLoader.html
 
 package info.guardianproject.checkey;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,11 +28,14 @@ import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.Loader;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 
 import java.util.List;
 
-public class AppListFragment extends ListFragment implements LoaderCallbacks<List<AppEntry>> {
+public class AppListFragment extends ListFragment
+        implements LoaderCallbacks<List<AppEntry>>, OnItemLongClickListener {
 
     private AppListAdapter adapter;
     WebView androidObservatoryView;
@@ -48,21 +50,34 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
         setListAdapter(adapter);
         setListShown(false);
 
+        getListView().setOnItemLongClickListener(this);
+
         // Prepare the loader
         // either reconnect with an existing one or start a new one
         getLoaderManager().initLoader(0, null, this);
     }
 
-    @TargetApi(11)
-    // TODO replace with appcompat-v7
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         AppEntry appEntry = (AppEntry) adapter.getItem(position);
         Intent intent = new Intent(getActivity(), WebViewActivity.class);
-        String urlString = "https://androidobservatory.org/?searchby=pkg&q=" + appEntry.getPackageName();
+        String urlString = "https://androidobservatory.org/?searchby=binhash&q="
+                + Utils.getBinaryHash(appEntry.getApkFile(), "sha1");
+        intent.setData(Uri.parse(urlString));
+        intent.putExtra(Intent.EXTRA_TITLE, R.string.by_apk_hash);
+        startActivity(intent);
+    }
+
+    @Override
+    public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
+        AppEntry appEntry = (AppEntry) adapter.getItem(position);
+        Intent intent = new Intent(getActivity(), WebViewActivity.class);
+        String urlString = "https://androidobservatory.org/?searchby=pkg&q="
+                + appEntry.getPackageName();
         intent.setData(Uri.parse(urlString));
         intent.putExtra(Intent.EXTRA_TITLE, R.string.by_package_name);
         startActivity(intent);
+        return true;
     }
 
     @Override
