@@ -21,11 +21,14 @@ https://developer.android.com/reference/android/content/AsyncTaskLoader.html
 package info.guardianproject.checkey;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.Loader;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ListView;
 
 import java.util.List;
@@ -33,6 +36,7 @@ import java.util.List;
 public class AppListFragment extends ListFragment implements LoaderCallbacks<List<AppEntry>> {
 
     private AppListAdapter adapter;
+    WebView androidObservatoryView;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -54,7 +58,11 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         AppEntry appEntry = (AppEntry) adapter.getItem(position);
-        // TODO search androidobs here
+        Intent intent = new Intent(getActivity(), WebViewActivity.class);
+        String urlString = "https://androidobservatory.org/?searchby=pkg&q=" + appEntry.getPackageName();
+        intent.setData(Uri.parse(urlString));
+        intent.putExtra(Intent.EXTRA_TITLE, R.string.by_package_name);
+        startActivity(intent);
     }
 
     @Override
