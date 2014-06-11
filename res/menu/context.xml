@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/by_apk_hash"
+        android:title="@string/by_apk_hash"/>
+    <item
+        android:id="@+id/by_package_name"
+        android:title="@string/by_package_name"/>
+    <item
+        android:id="@+id/by_signing_certificate"
+        android:title="@string/by_signing_certificate"/>
+
+</menu>

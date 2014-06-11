@@ -26,16 +26,18 @@ import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.Loader;
+import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ListView;
 
 import java.util.List;
 
-public class AppListFragment extends ListFragment
-        implements LoaderCallbacks<List<AppEntry>>, OnItemLongClickListener {
+public class AppListFragment extends ListFragment implements LoaderCallbacks<List<AppEntry>> {
 
     private AppListAdapter adapter;
     WebView androidObservatoryView;
@@ -50,7 +52,7 @@ public class AppListFragment extends ListFragment
         setListAdapter(adapter);
         setListShown(false);
 
-        getListView().setOnItemLongClickListener(this);
+        registerForContextMenu(getListView());
 
         // Prepare the loader
         // either reconnect with an existing one or start a new one
@@ -58,9 +60,40 @@ public class AppListFragment extends ListFragment
     }
 
     @Override
+    public void onCreateContextMenu(ContextMenu menu, View v,
+            ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getActivity().getMenuInflater();
+        inflater.inflate(R.menu.context, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterContextMenuInfo menuInfo = (AdapterContextMenuInfo) item.getMenuInfo();
+        AppEntry appEntry = (AppEntry) adapter.getItem(menuInfo.position);
+        Intent intent = new Intent(getActivity(), WebViewActivity.class);
+        switch (item.getItemId()) {
+            case R.id.by_apk_hash:
+                byApkHash(appEntry, intent);
+                break;
+            case R.id.by_package_name:
+                byPackageName(appEntry, intent);
+                break;
+            case R.id.by_signing_certificate:
+                bySigningCertificate(appEntry, intent);
+                break;
+        }
+        return true;
+    }
+
+    @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         AppEntry appEntry = (AppEntry) adapter.getItem(position);
         Intent intent = new Intent(getActivity(), WebViewActivity.class);
+        byApkHash(appEntry, intent);
+    }
+
+    private void byApkHash(AppEntry appEntry, Intent intent) {
         String urlString = "https://androidobservatory.org/?searchby=binhash&q="
                 + Utils.getBinaryHash(appEntry.getApkFile(), "sha1");
         intent.setData(Uri.parse(urlString));
@@ -68,16 +101,20 @@ public class AppListFragment extends ListFragment
         startActivity(intent);
     }
 
-    @Override
-    public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
-        AppEntry appEntry = (AppEntry) adapter.getItem(position);
-        Intent intent = new Intent(getActivity(), WebViewActivity.class);
+    private void byPackageName(AppEntry appEntry, Intent intent) {
         String urlString = "https://androidobservatory.org/?searchby=pkg&q="
                 + appEntry.getPackageName();
         intent.setData(Uri.parse(urlString));
         intent.putExtra(Intent.EXTRA_TITLE, R.string.by_package_name);
         startActivity(intent);
-        return true;
+    }
+
+    private void bySigningCertificate(AppEntry appEntry, Intent intent) {
+        String urlString = "https://androidobservatory.org/?searchby=certhash&q="
+                + Utils.getBinaryHash(appEntry.getApkFile(), "sha1");
+        intent.setData(Uri.parse(urlString));
+        intent.putExtra(Intent.EXTRA_TITLE, R.string.by_signing_certificate);
+        startActivity(intent);
     }
 
     @Override
