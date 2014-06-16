@@ -34,7 +34,9 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 public class AppListFragment extends ListFragment implements LoaderCallbacks<List<AppEntry>> {
@@ -110,9 +112,16 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
     }
 
     private void bySigningCertificate(AppEntry appEntry, Intent intent) {
-        String urlString = "https://androidobservatory.org/?searchby=certhash&q="
-                + Utils.getBinaryHash(appEntry.getApkFile(), "sha1");
-        intent.setData(Uri.parse(urlString));
+        String sha1;
+        try {
+            sha1 = Utils.getCertificateFingerprint(appEntry.getApkFile(), "sha1");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            Toast.makeText(getActivity(), "Cannot make fingerprint of signing certificate",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
+        intent.setData(Uri.parse("https://androidobservatory.org/?searchby=certhash&q=" + sha1));
         intent.putExtra(Intent.EXTRA_TITLE, R.string.by_signing_certificate);
         startActivity(intent);
     }

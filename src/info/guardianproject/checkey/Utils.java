@@ -7,11 +7,61 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateEncodingException;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 
 public final class Utils {
+
+    public static String getCertificateFingerprint(File apkFile, String hashAlgorithm)
+            throws NoSuchAlgorithmException {
+        byte[] rawCertBytes;
+        try {
+            JarFile apkJar = new JarFile(apkFile);
+            JarEntry aSignedEntry = (JarEntry) apkJar.getEntry("AndroidManifest.xml");
+
+            if (aSignedEntry == null) {
+                apkJar.close();
+                return null;
+            }
+
+            InputStream tmpIn = apkJar.getInputStream(aSignedEntry);
+            byte[] buff = new byte[2048];
+            while (tmpIn.read(buff, 0, buff.length) != -1) {
+                /*
+                 * NOP - apparently have to READ from the JarEntry before you
+                 * can call getCerficates() and have it return != null. Yay
+                 * Java.
+                 */
+            }
+            tmpIn.close();
+
+            if (aSignedEntry.getCertificates() == null
+                    || aSignedEntry.getCertificates().length == 0) {
+                apkJar.close();
+                return null;
+            }
+
+            Certificate signer = aSignedEntry.getCertificates()[0];
+            apkJar.close();
+            rawCertBytes = signer.getEncoded();
+
+            MessageDigest md = MessageDigest.getInstance(hashAlgorithm);
+            String hash = toHexString(md.digest(rawCertBytes));
+            md.reset();
+            Log.i("SigningCertificate", "raw hash: " + hash);
+
+            return hash;
+        } catch (CertificateEncodingException e) {
+        } catch (IOException e) {
+        }
+        return "BAD_CERTIFICATE";
+    }
 
     public static String getBinaryHash(File apk, String algo) {
         FileInputStream fis = null;
