@@ -48,7 +48,7 @@ public class AppListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         if (view == null)
-            view = inflater.inflate(R.layout.select_local_apps_list_item, parent, false);
+            view = inflater.inflate(R.layout.app_list_item, parent, false);
 
         AppEntry appEntry = data.get(position);
         ImageView iconView = ViewHolder.get(view, R.id.icon);
