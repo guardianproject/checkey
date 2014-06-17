@@ -1,15 +1,12 @@
 
 package info.guardianproject.checkey;
 
-import android.annotation.TargetApi;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-@TargetApi(11)
-// TODO replace with appcompat-v7
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends ActionBarActivity {
     private final String TAG = "MainActivity";
     private AppListFragment appListFragment = null;
 

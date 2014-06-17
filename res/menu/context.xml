@@ -3,12 +3,15 @@
 
     <item
         android:id="@+id/by_apk_hash"
+        android:showAsAction="ifRoom|withText"
         android:title="@string/by_apk_hash"/>
     <item
         android:id="@+id/by_package_name"
+        android:showAsAction="ifRoom|withText"
         android:title="@string/by_package_name"/>
     <item
         android:id="@+id/by_signing_certificate"
+        android:showAsAction="ifRoom|withText"
         android:title="@string/by_signing_certificate"/>
 
 </menu>

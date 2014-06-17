@@ -26,13 +26,13 @@ import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.Loader;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.view.ActionMode;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
-import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -42,6 +42,10 @@ import java.util.List;
 public class AppListFragment extends ListFragment implements LoaderCallbacks<List<AppEntry>> {
 
     private AppListAdapter adapter;
+    private ActionMode actionMode;
+    private ListView listView;
+    private int selectedItem = -1;
+    private static final String STATE_CHECKED = "info.guardianproject.checkey.STATE_CHECKED";
     WebView androidObservatoryView;
 
     @Override
@@ -54,7 +58,15 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
         setListAdapter(adapter);
         setListShown(false);
 
-        registerForContextMenu(getListView());
+        listView = getListView();
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+
+        if (savedInstanceState != null) {
+            int position = savedInstanceState.getInt(STATE_CHECKED, -1);
+            if (position > -1) {
+                listView.setItemChecked(position, true);
+            }
+        }
 
         // Prepare the loader
         // either reconnect with an existing one or start a new one
@@ -62,37 +74,21 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
     }
 
     @Override
-    public void onCreateContextMenu(ContextMenu menu, View v,
-            ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
-        MenuInflater inflater = getActivity().getMenuInflater();
-        inflater.inflate(R.menu.context, menu);
-    }
-
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        AdapterContextMenuInfo menuInfo = (AdapterContextMenuInfo) item.getMenuInfo();
-        AppEntry appEntry = (AppEntry) adapter.getItem(menuInfo.position);
-        Intent intent = new Intent(getActivity(), WebViewActivity.class);
-        switch (item.getItemId()) {
-            case R.id.by_apk_hash:
-                byApkHash(appEntry, intent);
-                break;
-            case R.id.by_package_name:
-                byPackageName(appEntry, intent);
-                break;
-            case R.id.by_signing_certificate:
-                bySigningCertificate(appEntry, intent);
-                break;
-        }
-        return true;
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt(STATE_CHECKED, selectedItem);
     }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        AppEntry appEntry = (AppEntry) adapter.getItem(position);
-        Intent intent = new Intent(getActivity(), WebViewActivity.class);
-        byApkHash(appEntry, intent);
+        if (actionMode != null) {
+            return;
+        }
+
+        // Start the CAB using the ActionMode.Callback defined above
+        ActionBarActivity activity = (ActionBarActivity) getActivity();
+        actionMode = activity.startSupportActionMode(mActionModeCallback);
+        selectedItem = position;
     }
 
     private void byApkHash(AppEntry appEntry, Intent intent) {
@@ -150,4 +146,52 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
         // Clear the data in the adapter
         adapter.setData(null);
     }
+
+    private ActionMode.Callback mActionModeCallback = new ActionMode.Callback() {
+
+        // Called when the action mode is created; startActionMode() was called
+        @Override
+        public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+            // Inflate a menu resource providing context menu items
+            MenuInflater inflater = mode.getMenuInflater();
+            inflater.inflate(R.menu.context, menu);
+            return true;
+        }
+
+        @Override
+        public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+            return false;
+        }
+
+        // Called when the user selects a contextual menu item
+        @Override
+        public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+            AppEntry appEntry = (AppEntry) adapter.getItem(selectedItem);
+            Intent intent = new Intent(getActivity(), WebViewActivity.class);
+            switch (item.getItemId()) {
+                case R.id.by_apk_hash:
+                    byApkHash(appEntry, intent);
+                    break;
+                case R.id.by_package_name:
+                    byPackageName(appEntry, intent);
+                    break;
+                case R.id.by_signing_certificate:
+                    bySigningCertificate(appEntry, intent);
+                    break;
+
+                default:
+                    return false;
+            }
+            return true;
+        }
+
+        // Called when the user exits the action mode
+        @Override
+        public void onDestroyActionMode(ActionMode mode) {
+            listView.setItemChecked(selectedItem, false);
+            listView.clearChoices();
+            selectedItem = -1;
+            actionMode = null;
+        }
+    };
 }
