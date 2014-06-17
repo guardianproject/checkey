@@ -176,6 +176,7 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
         public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
             AppEntry appEntry = (AppEntry) adapter.getItem(selectedItem);
             Intent intent = new Intent(getActivity(), WebViewActivity.class);
+            intent.putExtra(Intent.EXTRA_TEXT, appEntry.getLabel());
             switch (item.getItemId()) {
                 case R.id.virustotal:
                     virustotal(appEntry, intent);

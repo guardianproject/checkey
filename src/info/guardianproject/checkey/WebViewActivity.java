@@ -7,7 +7,6 @@ import android.net.http.SslError;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.SslErrorHandler;
@@ -16,6 +15,7 @@ import android.webkit.WebViewClient;
 
 public class WebViewActivity extends ActionBarActivity {
 
+    private Intent intent;
     private Uri uri;
 
     @Override
@@ -25,7 +25,7 @@ public class WebViewActivity extends ActionBarActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        Intent intent = getIntent();
+        intent = getIntent();
         int resid = intent.getIntExtra(Intent.EXTRA_TITLE, 0);
         if (resid != 0)
             actionBar.setTitle(resid);
@@ -34,7 +34,35 @@ public class WebViewActivity extends ActionBarActivity {
         webView.setWebViewClient(new MyWebViewClient());
         uri = intent.getData();
         webView.loadUrl(uri.toString());
-        Log.i("WebViewActivity", uri.toString());
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.webview, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                setResult(RESULT_CANCELED);
+                finish();
+                return true;
+            case R.id.share:
+                String appName = intent.getStringExtra(Intent.EXTRA_TEXT);
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("plain/text");
+                i.putExtra(Intent.EXTRA_TITLE, appName);
+                i.putExtra(Intent.EXTRA_SUBJECT, appName);
+                i.putExtra(Intent.EXTRA_TEXT, uri.toString());
+                startActivity(Intent.createChooser(i, getString(R.string.share_url_using)));
+                return true;
+            case R.id.open_in_browser:
+                startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private class MyWebViewClient extends WebViewClient {
@@ -53,9 +81,7 @@ public class WebViewActivity extends ActionBarActivity {
 
         @Override
         public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-            Log.i("MyWebViewClient", "onReceivedSslError: " + uri);
             String host = uri.getHost();
-            Log.i("MyWebViewClient", "getPrimaryError: " + error.getPrimaryError());
             int errno = error.getPrimaryError();
             if (host.equals("androidobservatory.org")
                     && (errno == SslError.SSL_EXPIRED || errno == SslError.SSL_UNTRUSTED)) {
