@@ -2,13 +2,21 @@
 package info.guardianproject.checkey;
 
 import android.content.Intent;
+import android.net.Uri;
+import android.net.http.SslError;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class WebViewActivity extends ActionBarActivity {
+
+    private Uri uri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +31,25 @@ public class WebViewActivity extends ActionBarActivity {
             actionBar.setTitle(resid);
 
         WebView webView = (WebView) findViewById(R.id.webview);
-        webView.loadUrl(intent.getData().toString());
-        Log.i("WebViewActivity", intent.getData().toString());
+        webView.setWebViewClient(new MyWebViewClient());
+        uri = intent.getData();
+        webView.loadUrl(uri.toString());
+        Log.i("WebViewActivity", uri.toString());
     }
 
+    private class MyWebViewClient extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            Uri clickedUri = Uri.parse(url);
+            String host = clickedUri.getHost();
+            if (host.equals("www.virustotal.com") || host.equals("androidobservatory.org")) {
+                // do not override; let my WebView load the page
+                return false;
+            }
+            // otherwise launch another Activity to handle the link
+            startActivity(new Intent(Intent.ACTION_VIEW, clickedUri));
+            return true;
+        }
+
+    }
 }
