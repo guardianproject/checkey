@@ -91,6 +91,14 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
         selectedItem = position;
     }
 
+    private void virustotal(AppEntry appEntry, Intent intent) {
+        String urlString = "https://www.virustotal.com/en/file/"
+                + Utils.getBinaryHash(appEntry.getApkFile(), "sha256") + "/analysis/";
+        intent.setData(Uri.parse(urlString));
+        intent.putExtra(Intent.EXTRA_TITLE, R.string.virustotal);
+        startActivity(intent);
+    }
+
     private void byApkHash(AppEntry appEntry, Intent intent) {
         String urlString = "https://androidobservatory.org/?searchby=binhash&q="
                 + Utils.getBinaryHash(appEntry.getApkFile(), "sha1");
@@ -169,20 +177,22 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
             AppEntry appEntry = (AppEntry) adapter.getItem(selectedItem);
             Intent intent = new Intent(getActivity(), WebViewActivity.class);
             switch (item.getItemId()) {
+                case R.id.virustotal:
+                    virustotal(appEntry, intent);
+                    return true;
                 case R.id.by_apk_hash:
                     byApkHash(appEntry, intent);
-                    break;
+                    return true;
                 case R.id.by_package_name:
                     byPackageName(appEntry, intent);
-                    break;
+                    return true;
                 case R.id.by_signing_certificate:
                     bySigningCertificate(appEntry, intent);
-                    break;
+                    return true;
 
                 default:
                     return false;
             }
-            return true;
         }
 
         // Called when the user exits the action mode

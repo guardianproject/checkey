@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
+        android:id="@+id/virustotal"
+        android:showAsAction="ifRoom|withText"
+        android:icon="@drawable/virustotal"
+        android:title="@string/virustotal"/>
+    <item
         android:id="@+id/by_apk_hash"
         android:showAsAction="ifRoom|withText"
         android:title="@string/by_apk_hash"/>

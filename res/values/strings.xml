@@ -5,6 +5,7 @@
     <string name="icon">icon</string>
     <string name="action_settings">Settings</string>
     <string name="no_applications_found">No applications found</string>
+    <string name="virustotal">VirusTotal</string>
     <string name="by_package_name">By Package Name</string>
     <string name="by_apk_hash">By APK Hash</string>
     <string name="by_signing_certificate">By Signing Certificate</string>
