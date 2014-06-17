@@ -51,5 +51,19 @@ public class WebViewActivity extends ActionBarActivity {
             return true;
         }
 
+        @Override
+        public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+            Log.i("MyWebViewClient", "onReceivedSslError: " + uri);
+            String host = uri.getHost();
+            Log.i("MyWebViewClient", "getPrimaryError: " + error.getPrimaryError());
+            int errno = error.getPrimaryError();
+            if (host.equals("androidobservatory.org")
+                    && (errno == SslError.SSL_EXPIRED || errno == SslError.SSL_UNTRUSTED)) {
+                handler.proceed();
+            } else {
+                super.onReceivedSslError(view, handler, error);
+            }
+        }
+
     }
 }
