@@ -180,20 +180,22 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
             switch (item.getItemId()) {
                 case R.id.virustotal:
                     virustotal(appEntry, intent);
-                    return true;
+                    break;
                 case R.id.by_apk_hash:
                     byApkHash(appEntry, intent);
-                    return true;
+                    break;
                 case R.id.by_package_name:
                     byPackageName(appEntry, intent);
-                    return true;
+                    break;
                 case R.id.by_signing_certificate:
                     bySigningCertificate(appEntry, intent);
-                    return true;
+                    break;
 
                 default:
                     return false;
             }
+            mode.finish();
+            return true;
         }
 
         // Called when the user exits the action mode
