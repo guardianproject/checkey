@@ -20,7 +20,13 @@ https://developer.android.com/reference/android/content/AsyncTaskLoader.html
 
 package info.guardianproject.checkey;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.Signature;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -36,11 +42,21 @@ import android.webkit.WebView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.ByteArrayInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
 import java.util.List;
 
 public class AppListFragment extends ListFragment implements LoaderCallbacks<List<AppEntry>> {
 
+    private PackageManager pm;
     private AppListAdapter adapter;
     private ActionMode actionMode;
     private ListView listView;
@@ -89,6 +105,49 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
         ActionBarActivity activity = (ActionBarActivity) getActivity();
         actionMode = activity.startSupportActionMode(mActionModeCallback);
         selectedItem = position;
+    }
+
+    private void saveCertificate(AppEntry appEntry, Intent intent) {
+        if (pm == null)
+            pm = getActivity().getApplicationContext().getPackageManager();
+        Activity activity = getActivity();
+        String packageName = appEntry.getPackageName();
+        PackageInfo pkgInfo;
+        try {
+            pkgInfo = pm.getPackageInfo(packageName, PackageManager.GET_SIGNATURES);
+            CertificateFactory certFactory = CertificateFactory.getInstance("X509");
+            for (Signature sig : pkgInfo.signatures) {
+                byte[] cert = sig.toByteArray();
+                InputStream inStream = new ByteArrayInputStream(cert);
+                X509Certificate x509 = (X509Certificate) certFactory.generateCertificate(inStream);
+
+                String fileName = packageName + ".cer";
+                final FileOutputStream os = activity.openFileOutput(fileName,
+                        Context.MODE_WORLD_READABLE);
+                os.write(cert);
+                os.close();
+
+                String subject = packageName + " - " + x509.getIssuerDN().getName()
+                        + " - " + x509.getNotAfter();
+                Uri uri = Uri.fromFile(activity.getFileStreamPath(fileName));
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("application/pkix-cert");
+                i.putExtra(Intent.EXTRA_STREAM, uri);
+                i.putExtra(Intent.EXTRA_TITLE, subject);
+                i.putExtra(Intent.EXTRA_SUBJECT, subject);
+                startActivity(Intent.createChooser(i, getString(R.string.save_cert_using)));
+            }
+        } catch (NameNotFoundException e) {
+            e.printStackTrace();
+        } catch (CertificateException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void virustotal(AppEntry appEntry, Intent intent) {
@@ -178,6 +237,9 @@ public class AppListFragment extends ListFragment implements LoaderCallbacks<Lis
             Intent intent = new Intent(getActivity(), WebViewActivity.class);
             intent.putExtra(Intent.EXTRA_TEXT, appEntry.getLabel());
             switch (item.getItemId()) {
+                case R.id.save:
+                    saveCertificate(appEntry, intent);
+                    break;
                 case R.id.virustotal:
                     virustotal(appEntry, intent);
                     break;

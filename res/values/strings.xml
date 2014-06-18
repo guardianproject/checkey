@@ -13,5 +13,6 @@
     <string name="share">Share</string>
     <string name="share_url_using">Share URL using:</string>
     <string name="save">Save…</string>
+    <string name="save_cert_using">Save certificate using:</string>
 
 </resources>
