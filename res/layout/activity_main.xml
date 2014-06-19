@@ -1,12 +1,54 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:text="SubjectDN:"
+                android:typeface="monospace" />
+
+            <TextView
+                android:id="@+id/subjectdn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:text="IssuerDN:"
+                android:typeface="monospace" />
+
+            <TextView
+                android:id="@+id/issuerdn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+    </TableLayout>
 
     <fragment
         android:id="@+id/fragment_app_list"
+        android:name="info.guardianproject.checkey.MainActivity$AppListFragment"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        class="info.guardianproject.checkey.AppListFragment" />
+        android:layout_height="wrap_content" />
 
-</RelativeLayout>
+</LinearLayout>
