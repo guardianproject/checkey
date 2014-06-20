@@ -1,9 +1,14 @@
 
 package info.guardianproject.checkey;
 
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
 
 import java.io.BufferedInputStream;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -13,14 +18,67 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.Certificate;
 import java.security.cert.CertificateEncodingException;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 public final class Utils {
 
+    private static PackageManager pm;
+    private static CertificateFactory certificateFactory;
+
+    public static String getCertificateFingerprint(X509Certificate cert, String hashAlgorithm) {
+        String hash = null;
+        try {
+            MessageDigest md = MessageDigest.getInstance(hashAlgorithm);
+            byte[] rawCert = cert.getEncoded();
+            hash = toHexString(md.digest(rawCert));
+            md.reset();
+        } catch (CertificateEncodingException e) {
+            hash = "CertificateEncodingException";
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            hash = "NoSuchAlgorithm";
+            e.printStackTrace();
+        }
+        return hash;
+    }
+
     public static String getCertificateFingerprint(File apkFile, String hashAlgorithm)
             throws NoSuchAlgorithmException {
-        byte[] rawCertBytes;
+        MessageDigest md = MessageDigest.getInstance(hashAlgorithm);
+        String hash = toHexString(md.digest(getCertificate(apkFile)));
+        md.reset();
+        return hash;
+    }
+
+    public static X509Certificate[] getX509Certificates(Context context, String packageName) {
+        X509Certificate[] certs = null;
+        if (pm == null)
+            pm = context.getApplicationContext().getPackageManager();
+        try {
+            PackageInfo pkgInfo = pm.getPackageInfo(packageName, PackageManager.GET_SIGNATURES);
+            if (certificateFactory == null)
+                certificateFactory = CertificateFactory.getInstance("X509");
+            certs = new X509Certificate[pkgInfo.signatures.length];
+            for (int i = 0; i < certs.length; i++) {
+                byte[] cert = pkgInfo.signatures[i].toByteArray();
+                InputStream inStream = new ByteArrayInputStream(cert);
+                certs[i] = (X509Certificate) certificateFactory.generateCertificate(inStream);
+            }
+        } catch (NameNotFoundException e) {
+            e.printStackTrace();
+        } catch (CertificateException e) {
+            e.printStackTrace();
+        }
+        return certs;
+    }
+
+    public static byte[] getCertificate(File apkFile)
+            throws NoSuchAlgorithmException {
+        byte[] rawCertBytes = null;
         try {
             JarFile apkJar = new JarFile(apkFile);
             JarEntry aSignedEntry = (JarEntry) apkJar.getEntry("AndroidManifest.xml");
@@ -50,17 +108,10 @@ public final class Utils {
             Certificate signer = aSignedEntry.getCertificates()[0];
             apkJar.close();
             rawCertBytes = signer.getEncoded();
-
-            MessageDigest md = MessageDigest.getInstance(hashAlgorithm);
-            String hash = toHexString(md.digest(rawCertBytes));
-            md.reset();
-            Log.i("SigningCertificate", "raw hash: " + hash);
-
-            return hash;
         } catch (CertificateEncodingException e) {
         } catch (IOException e) {
         }
-        return "BAD_CERTIFICATE";
+        return rawCertBytes;
     }
 
     public static String getBinaryHash(File apk, String algo) {

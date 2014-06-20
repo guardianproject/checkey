@@ -5,9 +5,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -24,17 +21,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.ByteArrayInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.StringBufferInputStream;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
 import java.security.cert.CertificateException;
-import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
+import java.security.interfaces.RSAPublicKey;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
@@ -42,8 +38,6 @@ import java.util.Properties;
 public class MainActivity extends ActionBarActivity {
     private final String TAG = "MainActivity";
 
-    private static PackageManager pm;
-    private static CertificateFactory certificateFactory;
     private static int selectedItem = -1;
     private AppListFragment appListFragment = null;
 
@@ -102,31 +96,9 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private static X509Certificate[] getX509Certificates(Context context, String packageName) {
-        X509Certificate[] certs = null;
-        if (pm == null)
-            pm = context.getApplicationContext().getPackageManager();
-        try {
-            PackageInfo pkgInfo = pm.getPackageInfo(packageName, PackageManager.GET_SIGNATURES);
-            if (certificateFactory == null)
-                certificateFactory = CertificateFactory.getInstance("X509");
-            certs = new X509Certificate[pkgInfo.signatures.length];
-            for (int i = 0; i < certs.length; i++) {
-                byte[] cert = pkgInfo.signatures[i].toByteArray();
-                InputStream inStream = new ByteArrayInputStream(cert);
-                certs[i] = (X509Certificate) certificateFactory.generateCertificate(inStream);
-            }
-        } catch (NameNotFoundException e) {
-            e.printStackTrace();
-        } catch (CertificateException e) {
-            e.printStackTrace();
-        }
-        return certs;
-    }
-
     private static void showCertificateInfo(Activity activity, AppEntry appEntry) {
         String packageName = appEntry.getPackageName();
-        X509Certificate[] certs = getX509Certificates(activity, packageName);
+        X509Certificate[] certs = Utils.getX509Certificates(activity, packageName);
         if (certs == null || certs.length < 1)
             return;
         /*
@@ -172,7 +144,7 @@ public class MainActivity extends ActionBarActivity {
     private void saveCertificate(AppEntry appEntry, Intent intent) {
         String packageName = appEntry.getPackageName();
         try {
-            for (X509Certificate x509 : getX509Certificates(this, packageName)) {
+            for (X509Certificate x509 : Utils.getX509Certificates(this, packageName)) {
                 String fileName = packageName + ".cer";
                 @SuppressWarnings("deprecation")
                 final FileOutputStream os = openFileOutput(fileName,
@@ -206,7 +178,7 @@ public class MainActivity extends ActionBarActivity {
     private void generatePin(AppEntry appEntry, Intent intent) {
         String packageName = appEntry.getPackageName();
         try {
-            for (X509Certificate x509 : getX509Certificates(this, packageName)) {
+            for (X509Certificate x509 : Utils.getX509Certificates(this, packageName)) {
                 Properties prop = new Properties();
                 prop.load(new StringBufferInputStream(x509.getSubjectDN().getName()
                         .replaceAll(",", "\n")));
