@@ -14,5 +14,6 @@
     <string name="share_url_using">Share URL using:</string>
     <string name="save">Save…</string>
     <string name="save_cert_using">Save certificate using:</string>
+    <string name="generate_pin">Generate Pin</string>
 
 </resources>

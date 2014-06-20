@@ -4,6 +4,11 @@
     tools:context="info.guardianproject.checkey.MainActivity" >
 
     <item
+        android:id="@+id/generate_pin"
+        android:icon="@android:drawable/ic_menu_set_as"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/generate_pin"/>
+    <item
         android:id="@+id/save"
         android:icon="@android:drawable/ic_menu_save"
         android:showAsAction="ifRoom|withText"
