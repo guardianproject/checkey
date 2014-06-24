@@ -33,6 +33,7 @@ import java.security.cert.X509Certificate;
 import java.security.interfaces.RSAPublicKey;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Properties;
 
 public class MainActivity extends ActionBarActivity {
@@ -133,11 +134,11 @@ public class MainActivity extends ActionBarActivity {
         expires.setText(cert.getNotAfter().toLocaleString());
 
         TextView md5 = (TextView) activity.findViewById(R.id.MD5);
-        md5.setText(Utils.getCertificateFingerprint(cert, "MD5"));
+        md5.setText(Utils.getCertificateFingerprint(cert, "MD5").toLowerCase(Locale.ENGLISH));
         TextView sha1 = (TextView) activity.findViewById(R.id.sha1);
-        sha1.setText(Utils.getCertificateFingerprint(cert, "SHA1"));
+        sha1.setText(Utils.getCertificateFingerprint(cert, "SHA1").toLowerCase(Locale.ENGLISH));
         TextView sha256 = (TextView) activity.findViewById(R.id.sha256);
-        sha256.setText(Utils.getCertificateFingerprint(cert, "SHA-256"));
+        sha256.setText(Utils.getCertificateFingerprint(cert, "SHA-256").toLowerCase(Locale.ENGLISH));
     }
 
     @SuppressLint("WorldReadableFiles")
@@ -205,7 +206,12 @@ public class MainActivity extends ActionBarActivity {
                     + name
                     + "Pin extends ApkSignaturePin {\n\n"
                     + "public " + name + "Pin() {\n"
-                    + "\t\tcertificates = new byte[][] {\n").getBytes());
+                    + "\t\tfingerprints = new String[] {\n").getBytes());
+            for (X509Certificate x509 : certs) {
+                os.write(("\t\t\t\"" + Utils.getCertificateFingerprint(x509, "SHA-256")
+                        .toLowerCase(Locale.ENGLISH) + "\",\n").getBytes());
+            }
+            os.write(("\t\t};\n" + "\t\tcertificates = new byte[][] {\n").getBytes());
             for (X509Certificate x509 : certs) {
                 Log.i("AppListFragment", "subjectdn: " + x509.getSubjectDN().getName());
                 os.write(Arrays.toString(x509.getEncoded())
