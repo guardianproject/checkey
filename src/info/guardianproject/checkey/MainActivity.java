@@ -178,51 +178,54 @@ public class MainActivity extends ActionBarActivity {
     private void generatePin(AppEntry appEntry, Intent intent) {
         String packageName = appEntry.getPackageName();
         try {
-            for (X509Certificate x509 : Utils.getX509Certificates(this, packageName)) {
-                Properties prop = new Properties();
-                prop.load(new StringBufferInputStream(x509.getSubjectDN().getName()
-                        .replaceAll(",", "\n")));
-                prop.list(System.out);
-                String name;
-                if (prop.containsKey("OU") && prop.containsKey("O"))
-                    name = (String) prop.get("OU") + prop.get("O");
-                else if (prop.containsKey("O"))
-                    name = (String) prop.get("O");
-                else if (prop.containsKey("OU"))
-                    name = (String) prop.get("OU");
-                else if (prop.containsKey("CN"))
-                    name = (String) prop.get("CN");
-                else
-                    name = "Unknown";
-                name = name.replaceAll("[^A-Za-z0-9]", "");
-                String fileName = name + "Pin.java";
+            X509Certificate[] certs = Utils.getX509Certificates(this, packageName);
+            Properties prop = new Properties();
+            prop.load(new StringBufferInputStream(certs[0].getSubjectDN().getName()
+                    .replaceAll(",", "\n")));
+            prop.list(System.out);
+            String name;
+            if (prop.containsKey("OU") && prop.containsKey("O"))
+                name = (String) prop.get("OU") + prop.get("O");
+            else if (prop.containsKey("O"))
+                name = (String) prop.get("O");
+            else if (prop.containsKey("OU"))
+                name = (String) prop.get("OU");
+            else if (prop.containsKey("CN"))
+                name = (String) prop.get("CN");
+            else
+                name = "Unknown";
+            name = name.replaceAll("[^A-Za-z0-9]", "");
+            String fileName = name + "Pin.java";
 
+            final FileOutputStream os = openFileOutput(fileName,
+                    Context.MODE_WORLD_READABLE);
+            os.write(("\npackage " + packageName + ";\n\n"
+                    + "import info.guardianproject.trustedintents.ApkSignaturePin;\n\n"
+                    + "public final class "
+                    + name
+                    + "Pin extends ApkSignaturePin {\n\n"
+                    + "public " + name + "Pin() {\n"
+                    + "\t\tcertificates = new byte[][] {\n").getBytes());
+            for (X509Certificate x509 : certs) {
                 Log.i("AppListFragment", "subjectdn: " + x509.getSubjectDN().getName());
-                final FileOutputStream os = openFileOutput(fileName,
-                        Context.MODE_WORLD_READABLE);
-                os.write(("\n\n"
-                        + "import info.guardianproject.secureintents.CertificatePin;\n\n"
-                        + "public final class "
-                        + name
-                        + "Pin extends CertificatePin {\n\n"
-                        + "\tprotected final static byte[] certificate = ").getBytes());
                 os.write(Arrays.toString(x509.getEncoded())
-                        .replaceAll("\\[", "{").replaceAll("\\]", "}")
+                        .replaceFirst("\\[", "{").replaceFirst("\\]", "},")
                         .getBytes());
-                os.write(";\n}\n".getBytes());
-                os.close();
-                Log.i("AppListFragment", "wrote " + fileName);
-
-                String subject = packageName + " - " + x509.getIssuerDN().getName()
-                        + " - " + x509.getNotAfter();
-                Uri uri = Uri.fromFile(getFileStreamPath(fileName));
-                Intent i = new Intent(Intent.ACTION_SEND);
-                i.setType("text/x-java-source");
-                i.putExtra(Intent.EXTRA_STREAM, uri);
-                i.putExtra(Intent.EXTRA_TITLE, subject);
-                i.putExtra(Intent.EXTRA_SUBJECT, subject);
-                startActivity(Intent.createChooser(i, getString(R.string.save_cert_using)));
             }
+            os.write("\t\t};\n\t}\n}\n".getBytes());
+            os.close();
+            Log.i("AppListFragment", "wrote " + fileName);
+
+            String subject = packageName + " - " + certs[0].getIssuerDN().getName()
+                    + " - " + certs[0].getNotAfter();
+            Uri uri = Uri.fromFile(getFileStreamPath(fileName));
+            Intent i = new Intent(Intent.ACTION_SEND);
+            i.setType("text/x-java-source");
+            i.putExtra(Intent.EXTRA_STREAM, uri);
+            i.putExtra(Intent.EXTRA_TITLE, subject);
+            i.putExtra(Intent.EXTRA_SUBJECT, subject);
+            startActivity(Intent.createChooser(i, getString(R.string.save_cert_using)));
+
         } catch (CertificateException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
