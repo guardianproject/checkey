@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ChecKey</string>
+    <string name="app_name">Checkey</string>
     <string name="icon">icon</string>
     <string name="action_settings">Settings</string>
     <string name="no_applications_found">No applications found</string>
