@@ -21,8 +21,7 @@ git submodule sync --recursive
 git submodule foreach --recursive git submodule sync
 git submodule update --init --recursive
 
-./setup-ant.sh
-./fix-support-library.sh
+./setup-ant
 
 if [ -e ~/.android/ant.properties ]; then
     cp ~/.android/ant.properties $projectroot/
