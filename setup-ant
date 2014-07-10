@@ -1,0 +1,16 @@
+#!/bin/sh
+
+projectname=`sed -n 's,.*name="app_name">\(.*\)<.*,\1,p' res/values/strings.xml`
+
+# fetch target from project.properties
+eval `grep '^target=' project.properties`
+
+echo "Setting up build for $projectname"
+echo ""
+
+for f in `find * -name project.properties`; do
+    projectdir=`dirname $f`
+    echo "Updating ant setup in $projectdir:"
+    android update lib-project -p $projectdir -t $target
+done
+android update project -p . --subprojects --name "$projectname" --target $target

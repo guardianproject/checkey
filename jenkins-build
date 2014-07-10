@@ -21,10 +21,4 @@ sed -i \
     -e "s,android:versionName=\"\([^\"][^\"]*\)\",android:versionName=\"\1.$versionNameDate\"," \
     AndroidManifest.xml
 
-projectname=`sed -n 's,.*name="app_name">\(.*\)<.*,\1,p' res/values/strings.xml`
-
-# fetch target from project.properties
-eval `grep '^target=' project.properties`
-
-android update lib-project --path libs/appcompat --target $target
-android update project --name $projectname --path . --target $target
+./setup-ant
