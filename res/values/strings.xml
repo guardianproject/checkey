@@ -16,5 +16,13 @@
     <string name="save">Save…</string>
     <string name="save_cert_using">Save certificate using:</string>
     <string name="generate_pin">Generate Pin</string>
+    <string name="key_type">Key Type:</string>
+    <string name="signature_type">Signature Type:</string>
+    <string name="version">Version:</string>
+    <string name="created">Created:</string>
+    <string name="expires">Expires:</string>
+    <string name="subject">Subject:</string>
+    <string name="issuer">Issuer:</string>
+    <string name="serial">Serial:</string>
 
 </resources>

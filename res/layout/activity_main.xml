@@ -21,7 +21,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Key Type:"
+                    android:text="@string/key_type"
                     android:typeface="serif" />
             </LinearLayout>
 
@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="right|center_vertical"
-                    android:text="Signature Type:"
+                    android:text="@string/signature_type"
                     android:typeface="serif" />
 
                 <TextView
@@ -54,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="right|center_vertical"
-                    android:text="Version:"
+                    android:text="@string/version"
                     android:typeface="serif" />
 
                 <TextView
@@ -77,7 +77,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Created:"
+                    android:text="@string/created"
                     android:typeface="serif" />
             </LinearLayout>
 
@@ -96,7 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="right|center_vertical"
-                    android:text="Expires:"
+                    android:text="@string/expires"
                     android:typeface="serif" />
 
                 <TextView
@@ -115,7 +115,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|center_vertical"
-                android:text="Subject:"
+                android:text="@string/subject"
                 android:typeface="serif" />
 
             <TextView
@@ -133,7 +133,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|center_vertical"
-                android:text="Issuer:"
+                android:text="@string/issuer"
                 android:typeface="serif" />
 
             <TextView
@@ -151,7 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|center_vertical"
-                android:text="Serial:"
+                android:text="@string/serial"
                 android:typeface="serif" />
 
             <TextView
