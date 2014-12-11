@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Checkey</string>
+  <string name="icon">Symbol</string>
+  <string name="action_settings">Einstellungen</string>
+  <string name="no_applications_found">Keine Anwendungen gefunden</string>
+  <string name="virustotal">VirusTotal</string>
+  <string name="by_package_name">Paketname</string>
+  <string name="by_apk_hash">APK-Hash</string>
+  <string name="by_signing_certificate">Signaturzertifikat</string>
+  <string name="open_in_browser">Im Browser öffnen</string>
+  <string name="share">Teilen</string>
+  <string name="share_url_using">URL teilen mit:</string>
+  <string name="save">Speichern…</string>
+  <string name="save_cert_using">Zertifikat speichern mit:</string>
+  <string name="generate_pin">PIN erzeugen</string>
+</resources>

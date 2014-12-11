@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Checkey</string>
+  <string name="icon">アイコン</string>
+  <string name="action_settings">設定</string>
+  <string name="no_applications_found">アプリケーションが見つかりません</string>
+  <string name="virustotal">VirusTotal</string>
+  <string name="by_package_name">パッケージ名</string>
+  <string name="by_apk_hash">APK ハッシュ</string>
+  <string name="by_signing_certificate">署名証明書</string>
+  <string name="open_in_browser">ブラウザで開く</string>
+  <string name="share">共有</string>
+  <string name="share_url_using">次で URL を共有:</string>
+  <string name="save">保存…</string>
+  <string name="save_cert_using">次で証明書を保存:</string>
+  <string name="generate_pin">PIN を生成</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Checkey</string>
+  <string name="icon">ikon</string>
+  <string name="action_settings">Innstillinger</string>
+  <string name="no_applications_found">Fant ingen programmer</string>
+  <string name="virustotal">Virusantall</string>
+  <string name="by_package_name">Pakkenavn</string>
+  <string name="by_apk_hash">APK-sjekksum</string>
+  <string name="by_signing_certificate">Signerer sertifikat</string>
+  <string name="open_in_browser">Åpne i nettleser</string>
+  <string name="share">Del</string>
+  <string name="share_url_using">Del nettadresse ved bruk av:</string>
+  <string name="save">Lagre...</string>
+  <string name="save_cert_using">Lagre sertifikat ved bruk av:</string>
+  <string name="generate_pin">Opprett pinkode</string>
+</resources>

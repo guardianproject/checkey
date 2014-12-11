@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Checkey</string>
+  <string name="icon">ikon</string>
+  <string name="action_settings">Ayarlar</string>
+  <string name="no_applications_found">Hiç uygulama bulunamadı</string>
+  <string name="virustotal">VirusTotal</string>
+  <string name="by_package_name">Paket İsmi</string>
+  <string name="by_apk_hash">APK Hash</string>
+  <string name="by_signing_certificate">İmza Sertifikası</string>
+  <string name="open_in_browser">Tarayıcıda aç</string>
+  <string name="share">Paylaş</string>
+  <string name="share_url_using">Bunu kullanarak URL paylaş:</string>
+  <string name="save">Kaydet...</string>
+  <string name="save_cert_using">Bunu kullanarak sertifikayı kaydet:</string>
+  <string name="generate_pin">Pin Oluştur</string>
+</resources>
