@@ -11,7 +11,7 @@
   <string name="open_in_browser">Åpne i nettleser</string>
   <string name="share">Del</string>
   <string name="share_url_using">Del nettadresse ved bruk av:</string>
-  <string name="save">Lagre...</string>
+  <string name="save">Lagre…</string>
   <string name="save_cert_using">Lagre sertifikat ved bruk av:</string>
   <string name="generate_pin">Opprett pinkode</string>
 </resources>

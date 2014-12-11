@@ -11,7 +11,7 @@
   <string name="open_in_browser">Abrir en el navegador</string>
   <string name="share">Compartir</string>
   <string name="share_url_using">Compartir URL con:</string>
-  <string name="save">Guardar...</string>
+  <string name="save">Guardar…</string>
   <string name="save_cert_using">Guardar certificado con:</string>
   <string name="generate_pin">Generar Pin</string>
 </resources>

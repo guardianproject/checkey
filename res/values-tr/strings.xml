@@ -11,7 +11,7 @@
   <string name="open_in_browser">Tarayıcıda aç</string>
   <string name="share">Paylaş</string>
   <string name="share_url_using">Bunu kullanarak URL paylaş:</string>
-  <string name="save">Kaydet...</string>
+  <string name="save">Kaydet…</string>
   <string name="save_cert_using">Bunu kullanarak sertifikayı kaydet:</string>
   <string name="generate_pin">Pin Oluştur</string>
 </resources>
