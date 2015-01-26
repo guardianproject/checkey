@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2">
   <file datatype="plaintext" original="source.xlf" source-language="en">
+    <header>
+      <note>Google places strick character limits on the various text fields in Google Play. The title is 30 characters, the short description is 80 characters, and the rest of the strings, which all go together in the description, are limited to 4000 characters.</note>
+    </header>
     <body>
       <trans-unit id="title" size-unit="char" maxwidth="30">
         <source>Checkey: info on local apps</source>
+        <note>This is limited by Google to 30 characters</note>
       </trans-unit>
       <trans-unit id="shortdescription" size-unit="char" maxwidth="80">
         <source>utility for getting information about the APKs that are installed on your device</source>
+        <note>This is limited by Google to 80 characters</note>
       </trans-unit>
       <trans-unit id="intro">
         <source>Checkey is a utility for getting information about the APKs that are installed on your device. Starting with a list of all of the apps that you have installed on your device, it will show you the APK signature with a single touch, and provides links to virustotal.com and androidobservatory.org to easily access the profiles of that APK. It will also let you export the signing certificate and generate ApkSignaturePin pin files for use with the TrustedIntents library.</source>
@@ -16,6 +21,7 @@
       </trans-unit>
       <trans-unit id="languagelist" translate="no">
         <source>Deutsch, English, español, suomi, 日本語, 한국어, Norsk, Türkçe</source>
+        <note>Do not translate the names of the languages, leave them just like this.</note>
       </trans-unit>
       <trans-unit id="helptranslate">
         <source>Don’t see your language? Join us and help translate the app:</source>
