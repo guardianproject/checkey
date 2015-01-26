@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Checkey</string>
+  <string name="app_description">Checkey on apuohjelma, jolla saa tietoja laiteeseen asennetuista APK-pakkaustiedostoista. Ohjelma luettelee aluksi kaikki laitteeseen asennetut sovellukset ja näyttää APK-allekirjoituksen yhdellä kosketuksella sekä tarjoaa linkit virustotal.com- ja androidobservatory.com-sivuistoille, joilta saa helposti kyseisen APK-pakkaustiedoston profiilit. Ohjelma sallii sinun myös viedä allekirjoitusvarmenteen ja tuottaa ApkSignaturePin-pin-tieodostoja käytettäväksi TrustedIntents-kirjastossa. </string>
+  <string name="icon">kuvake</string>
+  <string name="action_settings">Asetukset</string>
+  <string name="no_applications_found">Yhtään sovellusta ei löytynyt</string>
+  <string name="virustotal">VirusTotal</string>
+  <string name="by_package_name">Pakkausnimi</string>
+  <string name="by_apk_hash">APK-tiiviste</string>
+  <string name="by_signing_certificate">Allekirjoitetaan varmenne</string>
+  <string name="open_in_browser">Avaa selaimessa</string>
+  <string name="share">Jaa</string>
+  <string name="share_url_using">Jaa verkko-osoite käyttäen:</string>
+  <string name="save">Tallenna...</string>
+  <string name="save_cert_using">Tallenna varmenne käyttäen:</string>
+  <string name="generate_pin">Tuota pin-koodi</string>
+</resources>
