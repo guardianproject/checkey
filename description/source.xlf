@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2">
-  <file datatype="plaintext" original="source.xlf" source-language="en_US">
+  <file datatype="plaintext" original="source.xlf" source-language="en">
     <body>
       <trans-unit id="title" size-unit="char" maxwidth="30">
         <source>Checkey: info on local apps</source>
