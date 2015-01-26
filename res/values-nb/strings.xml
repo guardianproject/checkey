@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <string name="app_name">Checkey</string>
+  <string name="app_description">Checkey er et verktøy for innhenting av informasjon om APK-er installert på din enhet. I førstningen en liste over installerte program, hvis APK-signatur er ett trykk unna. Dernest lenker til virustotal.com og androidobservatory.org for profilering av valgt APK. Programmet lar deg også eksportere signeringssertifikatet og generere ApkSignaturePin pin-kodefiler for bruk med TrustedIntents-biblioteket.</string>
   <string name="icon">ikon</string>
   <string name="action_settings">Innstillinger</string>
   <string name="no_applications_found">Fant ingen programmer</string>

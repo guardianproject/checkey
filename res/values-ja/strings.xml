@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <string name="app_name">Checkey</string>
+  <string name="app_description">Checkey は、お使いのデバイスにインストールされている APK の情報を取得するユーティリティです。お使いのデバイスにインストールされたすべてのアプリのリストをはじめ、ワンタッチで APK シグネチャを表示したり、virustotal.com と androidobservatory.org へのリンクを提供して、簡単に APK のプロファイルにアクセスすることができます。また、署名証明書のエクスポート、TrustedIntents ライブラリで使用する ApkSignaturePin ピンファイルの生成ができます。</string>
   <string name="icon">アイコン</string>
   <string name="action_settings">設定</string>
   <string name="no_applications_found">アプリケーションが見つかりません</string>
