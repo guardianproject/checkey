@@ -12,7 +12,7 @@
   <string name="open_in_browser">브라우저 열기</string>
   <string name="share">공유</string>
   <string name="share_url_using">사용한 URL 공유:</string>
-  <string name="save">저장...</string>
+  <string name="save">저장…</string>
   <string name="save_cert_using">사용한 인증서 저장:</string>
   <string name="generate_pin">핀 생성</string>
 </resources>

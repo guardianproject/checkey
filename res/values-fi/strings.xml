@@ -12,7 +12,7 @@
   <string name="open_in_browser">Avaa selaimessa</string>
   <string name="share">Jaa</string>
   <string name="share_url_using">Jaa verkko-osoite käyttäen:</string>
-  <string name="save">Tallenna...</string>
+  <string name="save">Tallenna…</string>
   <string name="save_cert_using">Tallenna varmenne käyttäen:</string>
   <string name="generate_pin">Tuota pin-koodi</string>
 </resources>
