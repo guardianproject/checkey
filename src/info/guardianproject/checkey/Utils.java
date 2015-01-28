@@ -49,7 +49,10 @@ public final class Utils {
     public static String getCertificateFingerprint(File apkFile, String hashAlgorithm)
             throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance(hashAlgorithm);
-        String hash = toHexString(md.digest(getCertificate(apkFile)));
+        String hash = null;
+        byte [] cert = getCertificate(apkFile);
+        if (cert != null)
+            hash = toHexString(md.digest(cert));
         md.reset();
         return hash;
     }

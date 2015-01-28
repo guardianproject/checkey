@@ -11,6 +11,7 @@ import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.Loader;
 import android.support.v7.app.ActionBarActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -268,18 +269,20 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void bySigningCertificate(AppEntry appEntry, Intent intent) {
-        String sha1;
+        String sha1 = null;
         try {
             sha1 = Utils.getCertificateFingerprint(appEntry.getApkFile(), "sha1");
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
+        }
+        if (TextUtils.isEmpty(sha1)) {
             Toast.makeText(this, "Cannot make fingerprint of signing certificate",
                     Toast.LENGTH_LONG).show();
-            return;
+        } else {
+            intent.setData(Uri.parse("https://androidobservatory.org/?searchby=certhash&q=" + sha1));
+            intent.putExtra(Intent.EXTRA_TITLE, R.string.by_signing_certificate);
+            startActivity(intent);
         }
-        intent.setData(Uri.parse("https://androidobservatory.org/?searchby=certhash&q=" + sha1));
-        intent.putExtra(Intent.EXTRA_TITLE, R.string.by_signing_certificate);
-        startActivity(intent);
     }
 
     public static class AppListFragment extends ListFragment implements
