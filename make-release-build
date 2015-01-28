@@ -51,7 +51,7 @@ fi
 ./setup-ant
 faketime -f "$TIMESTAMP" ant release
 
-apk=$projectroot/bin/$projectname-*-release.apk
+apk=$projectroot/bin/$projectname-$versionName-unsigned.apk
 if which gpg > /dev/null; then
     if [ -z "`gpg --list-secret-keys`" ]; then
         echo "No GPG secret keys found, not signing APK"
