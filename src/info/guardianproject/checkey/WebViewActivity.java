@@ -8,6 +8,7 @@ import android.net.http.SslError;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.SslErrorHandler;
@@ -73,7 +74,11 @@ public class WebViewActivity extends ActionBarActivity {
     private class MyWebViewClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            if (TextUtils.isEmpty(url))
+                return true;
             Uri clickedUri = Uri.parse(url);
+            if (uri == null)
+                return true;
             String host = clickedUri.getHost();
             if (host.equals("www.virustotal.com") || host.equals("androidobservatory.org")) {
                 // do not override; let my WebView load the page
