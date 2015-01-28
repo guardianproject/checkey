@@ -276,8 +276,7 @@ public class MainActivity extends ActionBarActivity {
             e.printStackTrace();
         }
         if (TextUtils.isEmpty(sha1)) {
-            Toast.makeText(this, "Cannot make fingerprint of signing certificate",
-                    Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.error_cannot_make_fingerprint, Toast.LENGTH_LONG).show();
         } else {
             intent.setData(Uri.parse("https://androidobservatory.org/?searchby=certhash&q=" + sha1));
             intent.putExtra(Intent.EXTRA_TITLE, R.string.by_signing_certificate);

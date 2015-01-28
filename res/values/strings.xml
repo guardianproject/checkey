@@ -24,5 +24,7 @@
     <string name="subject">Subject:</string>
     <string name="issuer">Issuer:</string>
     <string name="serial">Serial:</string>
+    <!-- error messages -->
+    <string name="error_cannot_make_fingerprint">Cannot make fingerprint of signing certificate!</string>
 
 </resources>
