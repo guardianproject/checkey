@@ -1,6 +1,7 @@
 
 package info.guardianproject.checkey;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.net.http.SslError;
@@ -44,23 +45,27 @@ public class WebViewActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                setResult(RESULT_CANCELED);
-                finish();
-                return true;
-            case R.id.share:
-                String appName = intent.getStringExtra(Intent.EXTRA_TEXT);
-                Intent i = new Intent(Intent.ACTION_SEND);
-                i.setType("plain/text");
-                i.putExtra(Intent.EXTRA_TITLE, appName);
-                i.putExtra(Intent.EXTRA_SUBJECT, appName);
-                i.putExtra(Intent.EXTRA_TEXT, uri.toString());
-                startActivity(Intent.createChooser(i, getString(R.string.share_url_using)));
-                return true;
-            case R.id.open_in_browser:
-                startActivity(new Intent(Intent.ACTION_VIEW, uri));
-                return true;
+        try {
+            switch (item.getItemId()) {
+                case android.R.id.home:
+                    setResult(RESULT_CANCELED);
+                    finish();
+                    return true;
+                case R.id.share:
+                    String appName = intent.getStringExtra(Intent.EXTRA_TEXT);
+                    Intent i = new Intent(Intent.ACTION_SEND);
+                    i.setType("plain/text");
+                    i.putExtra(Intent.EXTRA_TITLE, appName);
+                    i.putExtra(Intent.EXTRA_SUBJECT, appName);
+                    i.putExtra(Intent.EXTRA_TEXT, uri.toString());
+                    startActivity(Intent.createChooser(i, getString(R.string.share_url_using)));
+                    return true;
+                case R.id.open_in_browser:
+                    startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                    return true;
+            }
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
         }
         return super.onOptionsItemSelected(item);
     }
