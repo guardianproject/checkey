@@ -47,6 +47,7 @@ public class DetailViewActivity extends ActionBarActivity {
             appIconImageView.setImageDrawable(icon);
             TextView apkPathTextView = (TextView) findViewById(R.id.apk_path);
             apkPathTextView.setText(info.sourceDir);
+
             TextView publicApkPathLabel = (TextView) findViewById(R.id.public_apk_path_label);
             TextView publicApkPathTextView = (TextView) findViewById(R.id.public_apk_path);
             if (TextUtils.equals(info.sourceDir, info.publicSourceDir)) {
@@ -57,6 +58,23 @@ public class DetailViewActivity extends ActionBarActivity {
                 publicApkPathTextView.setVisibility(View.VISIBLE);
                 publicApkPathTextView.setText(info.publicSourceDir);
             }
+
+            TextView dataDirectoryTextView = (TextView) findViewById(R.id.data_directory);
+            dataDirectoryTextView.setText(info.dataDir);
+
+            CharSequence description = info.loadDescription(pm);
+            if (!TextUtils.isEmpty(description)) {
+                TextView descriptionTextView = (TextView) findViewById(R.id.app_description);
+                descriptionTextView.setVisibility(View.VISIBLE);
+                descriptionTextView.setText(description);
+            }
+
+            TextView minSdkTextView = (TextView) findViewById(R.id.target_sdk_version);
+            minSdkTextView.setText(String.valueOf(info.targetSdkVersion));
+
+            TextView uidTextView = (TextView) findViewById(R.id.uid);
+            uidTextView.setText(String.valueOf(info.uid));
+
         } catch (NameNotFoundException e) {
             e.printStackTrace();
         }

@@ -20,8 +20,10 @@
     <string name="package_name">Package Name:</string>
     <string name="apk_path">APK Path:</string>
     <string name="public_apk_path">Public APK Path:</string>
+    <string name="data_directory">Data Directory:</string>
     <string name="key_type">Key Type:</string>
     <string name="signature_type">Signature Type:</string>
+    <string name="target_sdk_version">Target SDK Version:</string>
     <string name="version">Version:</string>
     <string name="created">Created:</string>
     <string name="expires">Expires:</string>
