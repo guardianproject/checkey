@@ -6,6 +6,7 @@
     <string name="icon">icon</string>
     <string name="action_settings">Settings</string>
     <string name="no_applications_found">No applications found</string>
+    <string name="details">Details</string>
     <string name="virustotal">VirusTotal</string>
     <string name="by_package_name">Package Name</string>
     <string name="by_apk_hash">APK Hash</string>
@@ -16,6 +17,9 @@
     <string name="save">Save…</string>
     <string name="save_cert_using">Save certificate using:</string>
     <string name="generate_pin">Generate Pin</string>
+    <string name="package_name">Package Name:</string>
+    <string name="apk_path">APK Path:</string>
+    <string name="public_apk_path">Public APK Path:</string>
     <string name="key_type">Key Type:</string>
     <string name="signature_type">Signature Type:</string>
     <string name="version">Version:</string>

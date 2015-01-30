@@ -78,6 +78,9 @@ public class MainActivity extends ActionBarActivity {
                 setResult(RESULT_CANCELED);
                 finish();
                 return true;
+            case R.id.details:
+                showDetailView(appEntry, intent);
+                return true;
             case R.id.generate_pin:
                 generatePin(appEntry, intent);
                 return true;
@@ -102,8 +105,7 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private static void showCertificateInfo(Activity activity, AppEntry appEntry) {
-        String packageName = appEntry.getPackageName();
+    static void showCertificateInfo(Activity activity, String packageName) {
         X509Certificate[] certs = Utils.getX509Certificates(activity, packageName);
         if (certs == null || certs.length < 1)
             return;
@@ -248,6 +250,12 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    private void showDetailView(AppEntry appEntry, Intent intent) {
+        intent.setClass(this, DetailViewActivity.class);
+        intent.putExtra(Intent.EXTRA_SUBJECT, appEntry.getPackageName());
+        startActivity(intent);
+    }
+
     private void virustotal(AppEntry appEntry, Intent intent) {
         String urlString = "https://www.virustotal.com/en/file/"
                 + Utils.getBinaryHash(appEntry.getApkFile(), "sha256") + "/analysis/";
@@ -337,7 +345,7 @@ public class MainActivity extends ActionBarActivity {
             ActionBarActivity activity = (ActionBarActivity) getActivity();
             selectedItem = position;
             AppEntry appEntry = (AppEntry) adapter.getItem(selectedItem);
-            showCertificateInfo(activity, appEntry);
+            showCertificateInfo(activity, appEntry.getPackageName());
         }
 
         @Override

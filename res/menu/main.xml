@@ -4,6 +4,11 @@
     tools:context="info.guardianproject.checkey.MainActivity" >
 
     <item
+        android:id="@+id/details"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="@string/details"
+        app:showAsAction="ifRoom"/>
+    <item
         android:id="@+id/virustotal"
         android:icon="@drawable/virustotal"
         android:title="@string/virustotal"
