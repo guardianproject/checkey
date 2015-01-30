@@ -67,6 +67,10 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         ListAdapter adapter = appListFragment.getListAdapter();
         AppEntry appEntry = (AppEntry) adapter.getItem(selectedItem);
+        if (appEntry == null) {
+            Toast.makeText(this, R.string.error_no_app_entry, Toast.LENGTH_SHORT).show();
+            return true;
+        }
         Intent intent = new Intent(this, WebViewActivity.class);
         intent.putExtra(Intent.EXTRA_TEXT, appEntry.getLabel());
         switch (item.getItemId()) {

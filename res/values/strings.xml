@@ -26,5 +26,6 @@
     <string name="serial">Serial:</string>
     <!-- error messages -->
     <string name="error_cannot_make_fingerprint">Cannot make fingerprint of signing certificate!</string>
+    <string name="error_no_app_entry">No app entry found!</string>
 
 </resources>
