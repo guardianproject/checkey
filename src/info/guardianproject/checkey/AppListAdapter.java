@@ -67,7 +67,10 @@ public class AppListAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return data == null ? null : data.get(position);
+        if (data == null || position < 0)
+            return null;
+        else
+            return data.get(position);
     }
 
     @Override
