@@ -65,3 +65,14 @@ what to install:
 Or on OSX with brew:
 
   brew install apktool unzip
+
+
+Licenses
+========
+
+The app itself it released under the GNU GPLv3+.  Here are some specific
+credits:
+
+* app icon: Ada Lovelace as a child (public domain)
+
+* app feature graphic: https://commons.wikimedia.org/wiki/File:SZ42-6-wheels-lightened.jpg
