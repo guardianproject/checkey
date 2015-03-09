@@ -1,0 +1,68 @@
+<?xml version="1.0" ?><xliff version="1.2">
+  <file datatype="plaintext" original="source.xlf" source-language="en">
+    <header>
+      <note from="developer">Google places strick character limits on the various text fields in Google Play. The title is 30 characters, the short description is 80 characters, and the rest of the strings, which all go together in the description, are limited to 4000 characters.</note>
+    </header>
+    <body>
+      <trans-unit id="title" maxwidth="30" size-unit="char">
+        <source>Checkey: info on local apps</source>
+        <target>Checkey: inform. apps locais</target>
+        <note from="developer">This is limited by Google to 30 characters</note>
+      </trans-unit>
+      <trans-unit id="shortdescription" maxwidth="80" size-unit="char">
+        <source>utility for getting information about the APKs that are installed on your device</source>
+        <target>Utilitário para obter informação sobre as APKs instaladas no seu dispositivo</target>
+        <note from="developer">This is limited by Google to 80 characters</note>
+      </trans-unit>
+      <trans-unit id="intro">
+        <source>Checkey is a utility for getting information about the APKs that are installed on your device. Starting with a list of all of the apps that you have installed on your device, it will show you the APK signature with a single touch, and provides links to virustotal.com and androidobservatory.org to easily access the profiles of that APK. It will also let you export the signing certificate and generate ApkSignaturePin pin files for use with the TrustedIntents library.</source>
+        <target>Checkey é um utilitário para obter informação sobre as APKs que estão instaladas no seu dispositivo. Começando com uma lista de todas as apps que estão instaladas no seu dispositivo. Esta irá mostrar-lhe a assinatura APK com um único toque, e proporciona hiperligações para virustotal.com e androidobservatory.org para aceder facilmente aos perfis dessa APK. Esta também irá deixá-lo exportar o certificado de assinatura e gerar os ficheiros código ApkSignaturePin para usar com a biblioteca TrustedIntents.</target>
+      </trans-unit>
+      <trans-unit id="wespeakyourlanguage">
+        <source>★ WE SPEAK YOUR LANGUAGE: Checkey is available for friends who speak:</source>
+        <target>★ NÓS FALAMOS O SEU IDIOMA: Checkey está disponível para os amigos que falam::</target>
+      </trans-unit>
+      <trans-unit id="languagelist" translate="no">
+        <source>Deutsch, English, español, suomi, 日本語, 한국어, Norsk, Türkçe</source>
+        <target>Alemão, espanhol, finlandês, inglês, norueguês, português (Brasil), português (Portugal), turco, suomi, 日本語, 한국어</target>
+        <note>Do not translate the names of the languages, leave them just like this.</note>
+      </trans-unit>
+      <trans-unit id="helptranslate">
+        <source>Don’t see your language? Join us and help translate the app:</source>
+        <target>Não vê o seu idioma? Junte-se a nós e ajude a traduzir a app:</target>
+      </trans-unit>
+      <trans-unit id="helptranslateurl" translate="no">
+        <source>https://www.transifex.com/projects/p/checkey</source>
+        <target>https://www.transifex.com/projects/p/checkey</target>
+      </trans-unit>
+      <trans-unit id="learnmore">
+        <source>***Learn More***</source>
+        <target>***Saiba Mais***</target>
+      </trans-unit>
+      <trans-unit id="aboutus">
+        <source>★ ABOUT US: Guardian Project is a group of developers that make secure mobile apps and open-source code for a better tomorrow</source>
+        <target>★ SOBRE NÓS: Guardian Project é um grupo de responsáveis pelo desenvolvimento que cria apps móveis seguras e de código aberto para um futuro melhor.</target>
+      </trans-unit>
+      <trans-unit id="ourwebsite">
+        <source>★ OUR WEBSITE: https://GuardianProject.info</source>
+        <target>★ O NOSSO SÍTIO DA WEB: https://GuardianProject.info</target>
+      </trans-unit>
+      <trans-unit id="ontwitter">
+        <source>★ ON TWITTER: https://twitter.com/guardianproject</source>
+        <target>★ NO TWITTER: https://twitter.com/guardianproject</target>
+      </trans-unit>
+      <trans-unit id="freesoftware">
+        <source>★ FREE SOFTWARE: Checkey is free software. You can take a look at our source code, or contribute to help make Checkey even better:</source>
+        <target>★ PROGRAMA GRATUITO: Checkey é um programa gratuito. Pode dar uma vista de olhos no nosso código aberto, ou contribuir para ajudar a tornar Checkey ainda melhor:</target>
+      </trans-unit>
+      <trans-unit id="gitrepo" translate="no">
+        <source>https://github.com/guardianproject/checkey</source>
+        <target>https://github.com/guardianproject/checkey</target>
+      </trans-unit>
+      <trans-unit id="messageus">
+        <source>★ MESSAGE US: Are we missing your favorite feature? Found an annoying bug? Please tell us! We’d love to hear from you. Send us an email: support@guardianproject.info or find us in our chat room https://guardianproject.info/contact</source>
+        <target>★ ENVIE-NOS UMA MENSAGEM: Nós estamos a perder a sua função favorita? Encontrou um bug aborrecido? Por favor, diga-nos! Nós gostaríamos de o ouvir. Envie-nos uma mensagem: support@guardianproject.info ou encontre-nos na nossa sala de conversação em https://guardianproject.info/contact</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
