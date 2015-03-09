@@ -1,3 +1,9 @@
+v0.1.2
++ simplify overview and add "detail view"
++ fix all known crasher bugs
++ add translations: pt_PT ru sl
++ update translations: de fi ja nb
+
 v0.1.1
 + add translations: de es fi ja ko nb tr
 + reproducible build process
