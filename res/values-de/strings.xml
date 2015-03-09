@@ -14,4 +14,11 @@
   <string name="save">Speichern…</string>
   <string name="save_cert_using">Zertifikat speichern mit:</string>
   <string name="generate_pin">PIN erzeugen</string>
+  <string name="key_type">Schlüsseltyp:</string>
+  <string name="signature_type">Signaturtyp:</string>
+  <string name="version">Version:</string>
+  <string name="created">Erstellt:</string>
+  <string name="subject">Betreff:</string>
+  <string name="serial">Seriennummer:</string>
+  <!--error messages-->
 </resources>

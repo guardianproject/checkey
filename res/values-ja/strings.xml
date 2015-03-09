@@ -15,4 +15,14 @@
   <string name="save">保存…</string>
   <string name="save_cert_using">次で証明書を保存:</string>
   <string name="generate_pin">PIN を生成</string>
+  <string name="key_type">鍵種類:</string>
+  <string name="signature_type">署名種類:</string>
+  <string name="version">バージョン:</string>
+  <string name="created">作成:</string>
+  <string name="expires">期限:</string>
+  <string name="subject">主体:</string>
+  <string name="issuer">発行:</string>
+  <string name="serial">シリアル:</string>
+  <!--error messages-->
+  <string name="error_cannot_make_fingerprint">署名証明書のフィンガープリントを作ることはできません!</string>
 </resources>

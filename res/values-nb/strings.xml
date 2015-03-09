@@ -15,4 +15,14 @@
   <string name="save">Lagre…</string>
   <string name="save_cert_using">Lagre sertifikat ved bruk av:</string>
   <string name="generate_pin">Opprett pinkode</string>
+  <string name="key_type">Nøkkeltype:</string>
+  <string name="signature_type">Type signatur:</string>
+  <string name="version">Versjon:</string>
+  <string name="created">Opprettet:</string>
+  <string name="expires">Utløper:</string>
+  <string name="subject">Emne:</string>
+  <string name="issuer">Utsteder:</string>
+  <string name="serial">Serienummer:</string>
+  <!--error messages-->
+  <string name="error_cannot_make_fingerprint">Kan ikke opprette fingeravtrykk av signeringssertifikatet!</string>
 </resources>
