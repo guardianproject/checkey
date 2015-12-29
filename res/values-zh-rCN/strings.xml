@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Checkey</string>
+  <string name="app_description">Checkey 是一个获得已安装 APK 相关信息的实用工具。它从您的设备上已安装的所有应用开始，一键触摸即可显示 APK 的指纹，并且提供到达 virustotal.com 和 androidobservatory.org 的快捷链接，让您方便地了解特定 APK 的档案。它还可以让您导出签名证书和生成 ApkSignaturePin Pin 文件供 TrustedIntents 库使用。</string>
+  <string name="icon">图标</string>
+  <string name="action_settings">设置</string>
+  <string name="no_applications_found">未找到任何应用程序</string>
+  <string name="details">详细信息</string>
+  <string name="virustotal">VirusTotal</string>
+  <string name="by_package_name">包名称</string>
+  <string name="by_apk_hash">APK 哈希值</string>
+  <string name="by_signing_certificate">签名证书</string>
+  <string name="open_in_browser">在浏览器中打开</string>
+  <string name="share">分享</string>
+  <string name="share_url_using">分享网址使用：</string>
+  <string name="save">保存…</string>
+  <string name="save_cert_using">保存证书使用：</string>
+  <string name="generate_pin">生成 PIN</string>
+  <string name="package_name">包名称</string>
+  <string name="apk_path">APK 路径：</string>
+  <string name="public_apk_path">公用 APK 路径：</string>
+  <string name="data_directory">数据目录：</string>
+  <string name="key_type">密钥类型：</string>
+  <string name="signature_type">签名类型：</string>
+  <string name="target_sdk_version">目标 SDK 版本：</string>
+  <string name="version">版本：</string>
+  <string name="created">创建时间：</string>
+  <string name="expires">过期时间：</string>
+  <string name="subject">主题：</string>
+  <string name="issuer">签发者：</string>
+  <string name="serial">序列号：</string>
+  <!--error messages-->
+  <string name="error_cannot_make_fingerprint">无法取得签名证书的指纹！</string>
+  <string name="error_no_app_entry">没有找到应用的记录！</string>
+</resources>

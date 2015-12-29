@@ -1,0 +1,70 @@
+<?xml version="1.0" ?><xliff version="1.2">
+  <file datatype="plaintext" original="source.xlf" source-language="en" target-language="zh-CN">
+    <header>
+      <note from="developer">Google places strick character limits on the various text fields in Google Play. The title is 30 characters, the short description is 80 characters, and the rest of the strings, which all go together in the description, are limited to 4000 characters.</note>
+    </header>
+    <body>
+      <trans-unit id="title" maxwidth="30" size-unit="char">
+        <source>Checkey: info on local apps</source>
+        <target>Checkey：本地应用的信息</target>
+        <note from="developer">This is limited by Google to 30 characters</note>
+      </trans-unit>
+      <trans-unit id="shortdescription" maxwidth="80" size-unit="char">
+        <source>utility for getting information about the APKs that are installed on your device</source>
+        <target>一个实用工具，获取已安装在您的设备上的应用的有关信息</target>
+        <note from="developer">This is limited by Google to 80 characters</note>
+      </trans-unit>
+      <trans-unit id="intro">
+        <source>Checkey is a utility for getting information about the APKs that are installed on your device. Starting with a list of all of the apps that you have installed on your device, it will show you the APK signature with a single touch, and provides links to virustotal.com and androidobservatory.org to easily access the profiles of that APK. It will also let you export the signing certificate and generate ApkSignaturePin pin files for use with the TrustedIntents library.</source>
+        <target>Checkey 是一个获得已安装 APK 相关信息的实用工具。它从您的设备上已安装的所有应用开始，一键触摸即可显示 APK 的指纹，并且提供到达 virustotal.com 和 androidobservatory.org 的快捷链接，让您方便地了解特定 APK 的档案。它还可以让您导出签名证书和生成 ApkSignaturePin Pin 文件供 TrustedIntents 库使用。</target>
+      </trans-unit>
+      <trans-unit id="wespeakyourlanguage">
+        <source>★ WE SPEAK YOUR LANGUAGE: Checkey is available for friends who speak:</source>
+        <target>★ Checkey 支持下列语言：</target>
+      </trans-unit>
+      <trans-unit id="languagelist" translate="no">
+        <source>Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe</source>
+        <target>Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe</target>
+        <note from="developer">Do not translate the names of the languages, leave them just like this.</note>
+      </trans-unit>
+      <trans-unit id="helptranslate">
+        <source>Don’t see your language? Join us and help translate the app:</source>
+        <target>没看到您的语言？帮忙翻译本应用吧：</target>
+      </trans-unit>
+      <trans-unit id="helptranslateurl" translate="no">
+        <source>https://www.transifex.com/projects/p/checkey</source>
+        <target>https://www.transifex.com/projects/p/checkey</target>
+        <note from="developer">Do not translate this.</note>
+      </trans-unit>
+      <trans-unit id="learnmore">
+        <source>***Learn More***</source>
+        <target>***详细了解***</target>
+      </trans-unit>
+      <trans-unit id="aboutus">
+        <source>★ ABOUT US: Guardian Project is a group of developers that make secure mobile apps and open-source code for a better tomorrow</source>
+        <target>★ 关于我们：Guardian 项目是一个开发者小组，致力于创造移动应用和开源代码的美好明天</target>
+      </trans-unit>
+      <trans-unit id="ourwebsite">
+        <source>★ OUR WEBSITE: https://GuardianProject.info</source>
+        <target>★ 我们的网站: https://GuardianProject.info</target>
+      </trans-unit>
+      <trans-unit id="ontwitter">
+        <source>★ ON TWITTER: https://twitter.com/guardianproject</source>
+        <target>★ 我们的 Twitter: https://twitter.com/guardianproject</target>
+      </trans-unit>
+      <trans-unit id="freesoftware">
+        <source>★ FREE SOFTWARE: Checkey is free software. You can take a look at our source code, or contribute to help make Checkey even better:</source>
+        <target>★ 自由软件：Checkey 是自由软件。您可以查看我们的源代码，还可以帮助我们让 Checkey 变得更好：</target>
+      </trans-unit>
+      <trans-unit id="gitrepo" translate="no">
+        <source>https://github.com/guardianproject/checkey</source>
+        <target>https://github.com/guardianproject/checkey</target>
+        <note from="developer">Do not translate this.</note>
+      </trans-unit>
+      <trans-unit id="messageus">
+        <source>★ MESSAGE US: Are we missing your favorite feature? Found an annoying bug? Please tell us! We’d love to hear from you. Send us an email: support@guardianproject.info or find us in our chat room https://guardianproject.info/contact</source>
+        <target>★ 致用户：我们还缺少你喜欢的功能？发现了一个 bug？请告诉我们！我们乐于听取您的意见。请发送电子邮件至: support@guardianproject.info 或者加入我们的聊天室 https://guardianproject.info/contact</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

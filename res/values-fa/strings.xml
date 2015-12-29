@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Checkey</string>
+  <string name="icon">آیکون</string>
+  <string name="action_settings">تنظیمات</string>
+  <string name="no_applications_found">برنامه یافت نشد</string>
+  <string name="details">جزئیات</string>
+  <string name="virustotal">VirusTotal</string>
+  <string name="by_package_name">نام بسته</string>
+  <string name="by_apk_hash">کد هش APK</string>
+  <string name="by_signing_certificate">گواهی امضای</string>
+  <string name="open_in_browser">باز کردن در مرورگر</string>
+  <string name="share">اشتراک</string>
+  <string name="share_url_using">اشتراک URL با استفاده از:</string>
+  <string name="save">ذخیره ...</string>
+  <string name="save_cert_using">ذخیره گواهی با استفاده از:</string>
+  <string name="generate_pin">تولید پین</string>
+  <string name="package_name">نام بسته</string>
+  <string name="apk_path">مسیر APK:</string>
+  <string name="public_apk_path">مسیر APK عمومی:</string>
+  <string name="data_directory">دایرکتوری اطلاعات:</string>
+  <string name="key_type">نوع کلید:</string>
+  <string name="signature_type">نوع امضا:</string>
+  <string name="target_sdk_version">هدف SDK نسخه:</string>
+  <string name="version">نسخه:</string>
+  <string name="created">ایجاد شده:</string>
+  <string name="expires">انقضا:</string>
+  <string name="subject">موضوع:</string>
+  <string name="issuer">صادرکننده:</string>
+  <string name="serial">سریال:</string>
+  <!--error messages-->
+  <string name="error_cannot_make_fingerprint">نمی توان ساخت اثر انگشت از گواهی امضا!</string>
+</resources>
