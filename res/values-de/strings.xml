@@ -1,9 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <string name="app_name">Checkey</string>
+  <string name="app_description">Checkey ist eine öffentliche Dienstleistung um Informationen über Anwendungen die auf deinem Gerät installiert sind, zu bekommen. Beginne mit einer Liste mit allen Apps die du auf deinem Gerät installiert hast, es zeigt sich dir die Applikations Signatur mit einer einfachen Berührung und bietet Links zu virustotal.com und androidobservatery,org um einfachen Zugriff auf die Profile der Applikation zu bekommen. Es erlaubt dir außerdem das signierte Zertifikat zu exportieren und einen Applikations Signatur Pin zu erzeugen für die Verwendung mit der TrustedIntends Bücherei.</string>
   <string name="icon">Symbol</string>
   <string name="action_settings">Einstellungen</string>
   <string name="no_applications_found">Keine Anwendungen gefunden</string>
+  <string name="details">Details</string>
   <string name="virustotal">VirusTotal</string>
   <string name="by_package_name">Paketname</string>
   <string name="by_apk_hash">APK-Hash</string>
@@ -14,11 +16,20 @@
   <string name="save">Speichern…</string>
   <string name="save_cert_using">Zertifikat speichern mit:</string>
   <string name="generate_pin">PIN erzeugen</string>
+  <string name="package_name">Paketname:</string>
+  <string name="apk_path">APK-Pfad:</string>
+  <string name="public_apk_path">Öffentlicher APK-Pfad:</string>
+  <string name="data_directory">Datenverzeichnis:</string>
   <string name="key_type">Schlüsseltyp:</string>
   <string name="signature_type">Signaturtyp:</string>
+  <string name="target_sdk_version">SDK-Zielversion:</string>
   <string name="version">Version:</string>
   <string name="created">Erstellt:</string>
+  <string name="expires">Läuft ab:</string>
   <string name="subject">Betreff:</string>
+  <string name="issuer">Aussteller:</string>
   <string name="serial">Seriennummer:</string>
   <!--error messages-->
+  <string name="error_cannot_make_fingerprint">Es kann kein Fingerabdruck vom Signaturzertifikat erstellt werden!</string>
+  <string name="error_no_app_entry">Kein App-Eintrag gefunden!</string>
 </resources>
