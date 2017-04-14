@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Checkey</string>
+  <string name="app_description">Checkey alətinizə yüklədiyiniz tətbiqetmələrinin APK-sı haqda məlumatları üzə çıxarmaq üçündür. Alətinizdəki tətbiqetmələrinin siyahısına baxmaqdan başlayaraq, bir toxunuşla APK imzalarını göstərəcək və virustotal.com və androidobservatory.org ilə o APK-lərin profillərini izləmək imkanı verəcək. O, həm də Trustedİntents kitabxanası vasitəsilə imzalanmış sertifikatları ixrac etmək və ApkSignaturePin pin fayllar yaratmağa imkan verəcək.</string>
+  <string name="icon">işarə</string>
+  <string name="action_settings">Quraşdırmalar</string>
+  <string name="no_applications_found">Tətbiqetmələr tapılmadı</string>
+  <string name="details">Ətraflı</string>
+  <string name="virustotal">VirusTotal</string>
+  <string name="by_package_name">Paket adı</string>
+  <string name="by_apk_hash">APK Hash</string>
+  <string name="by_signing_certificate">Setifikat imzalaması</string>
+  <string name="open_in_browser">Səyyahda aç</string>
+  <string name="share">Paylaş</string>
+  <string name="share_url_using">URL-i bununla paylaş:</string>
+  <string name="save">Saxla...</string>
+  <string name="save_cert_using">Sertifikatı bununla saxla:</string>
+  <string name="generate_pin">Pin yarat</string>
+  <string name="package_name">Paket adı:</string>
+  <string name="apk_path">APK Cığırı:</string>
+  <string name="public_apk_path">Açıq APK Cığırı:</string>
+  <string name="data_directory">Məlumat qovluğu:</string>
+  <string name="key_type">Açar növü:</string>
+  <string name="signature_type">İmzalama növü:</string>
+  <string name="target_sdk_version">Məqsədli SDK versiyası:</string>
+  <string name="version">Versiya:</string>
+  <string name="created">Yaradılıb:</string>
+  <string name="expires">Bitir:</string>
+  <string name="subject">Mövzu:</string>
+  <string name="issuer">Verən:</string>
+  <string name="serial">Serial:</string>
+  <!--error messages-->
+  <string name="error_cannot_make_fingerprint">İmzalanan sertifikatın barmaq izini yarada bilmir!</string>
+  <string name="error_no_app_entry">Tətbiqetmə tapılmadı!</string>
+</resources>
