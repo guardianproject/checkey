@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <string name="app_name">Checkey</string>
-  <string name="app_description">Checkey ist eine öffentliche Dienstleistung um Informationen über Anwendungen die auf deinem Gerät installiert sind, zu bekommen. Beginne mit einer Liste mit allen Apps die du auf deinem Gerät installiert hast, es zeigt sich dir die Applikations Signatur mit einer einfachen Berührung und bietet Links zu virustotal.com und androidobservatery,org um einfachen Zugriff auf die Profile der Applikation zu bekommen. Es erlaubt dir außerdem das signierte Zertifikat zu exportieren und einen Applikations Signatur Pin zu erzeugen für die Verwendung mit der TrustedIntends Bücherei.</string>
+  <string name="app_description">Checkey ist eine Anwendung, um Informationen über Anwendungen die auf deinem Gerät installiert sind, zu bekommen. Anfangs wird eine Liste mit allen installierten Apps angezeigt. Mit einem einfachen Druck auf die App werden die Signatur und Links zu virustotal.com sowie androidobservatory.org angezeigt. Außerdem können die Zertifikate exportiert werden und ApkSignaturePin Pin-Dateien für die TrustedIntents Bibliothek erzeugt werden.</string>
   <string name="icon">Symbol</string>
   <string name="action_settings">Einstellungen</string>
   <string name="no_applications_found">Keine Anwendungen gefunden</string>
