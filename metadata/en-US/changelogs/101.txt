@@ -1,0 +1,3 @@
++ add translations: de es fi ja ko nb tr
++ reproducible build process
++ add latest Android Support v7 to fix crashes
