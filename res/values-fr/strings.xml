@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">Vériclé</string>
-  <string name="app_description">Vériclé est un utilitaire permettant de recueillir les informations des APK installés sur votre appareil. En partant d\'une liste de toutes les applis installées sur votre appareil, Vériclé vous présentera la signature de l\'APK en un seul toucher, et vous offrira des liens vers virustotal.com et androidobservatory.org afin d\'accéder aisément aux profils de cet APK. Il vous permettra aussi d\'exporter le certificat de signature et de générer des fichiers NIP ApkSignaturePin pour les utiliser avec la bibliothèque TrustedIntents.</string>
+  <string name="app_name">Checkey</string>
+  <string name="app_description">Checkey est un utilitaire permettant de recueillir les informations des APK installés sur votre appareil. En partant d\'une liste de toutes les applis installées sur votre appareil, Vériclé vous présentera la signature de l\'APK en un seul toucher, et vous offrira des liens vers virustotal.com et androidobservatory.org afin d\'accéder aisément aux profils de cet APK. Il vous permettra aussi d\'exporter le certificat de signature et de générer des fichiers NIP ApkSignaturePin pour les utiliser avec la bibliothèque TrustedIntents.</string>
   <string name="icon">Icône</string>
   <string name="action_settings">Paramètres</string>
   <string name="no_applications_found">Aucune application trouvée</string>
@@ -13,7 +13,7 @@
   <string name="open_in_browser">Ouvrir dans le navigateur</string>
   <string name="share">Partager</string>
   <string name="share_url_using">Partager l\'URL en utilisant :</string>
-  <string name="save">Enregistrer...</string>
+  <string name="save">Enregistrer…</string>
   <string name="save_cert_using">Enregistrer le certificat avec :</string>
   <string name="generate_pin">Générer un NIP</string>
   <string name="package_name">Nom de paquet :</string>

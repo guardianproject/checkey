@@ -5,6 +5,7 @@
   <string name="icon">アイコン</string>
   <string name="action_settings">設定</string>
   <string name="no_applications_found">アプリケーションが見つかりません</string>
+  <string name="details">詳細</string>
   <string name="virustotal">VirusTotal</string>
   <string name="by_package_name">パッケージ名</string>
   <string name="by_apk_hash">APK ハッシュ</string>
@@ -15,8 +16,13 @@
   <string name="save">保存…</string>
   <string name="save_cert_using">次で証明書を保存:</string>
   <string name="generate_pin">PIN を生成</string>
+  <string name="package_name">パッケージ名:</string>
+  <string name="apk_path">APK パス:</string>
+  <string name="public_apk_path">公開 APK パス:</string>
+  <string name="data_directory">データ ディレクトリー:</string>
   <string name="key_type">鍵種類:</string>
   <string name="signature_type">署名種類:</string>
+  <string name="target_sdk_version">ターゲット SDK バージョン:</string>
   <string name="version">バージョン:</string>
   <string name="created">作成:</string>
   <string name="expires">期限:</string>
@@ -25,4 +31,5 @@
   <string name="serial">シリアル:</string>
   <!--error messages-->
   <string name="error_cannot_make_fingerprint">署名証明書のフィンガープリントを作ることはできません!</string>
+  <string name="error_no_app_entry">アプリのエントリーが見つかりません!</string>
 </resources>
