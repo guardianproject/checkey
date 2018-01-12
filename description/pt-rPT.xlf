@@ -1,5 +1,5 @@
 <?xml version="1.0" ?><xliff version="1.2">
-  <file datatype="plaintext" original="source.xlf" source-language="en">
+  <file datatype="plaintext" original="source.xlf" source-language="en" target-language="pt-PT">
     <header>
       <note from="developer">Google places strick character limits on the various text fields in Google Play. The title is 30 characters, the short description is 80 characters, and the rest of the strings, which all go together in the description, are limited to 4000 characters.</note>
     </header>
@@ -23,9 +23,9 @@
         <target>★ NÓS FALAMOS O SEU IDIOMA: Checkey está disponível para os amigos que falam::</target>
       </trans-unit>
       <trans-unit id="languagelist" translate="no">
-        <source>Deutsch, English, español, suomi, 日本語, 한국어, Norsk, Türkçe</source>
-        <target>Alemão, espanhol, finlandês, inglês, norueguês, português (Brasil), português (Portugal), turco, suomi, 日本語, 한국어</target>
-        <note>Do not translate the names of the languages, leave them just like this.</note>
+        <source>Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe</source>
+        <target>Alemão, Coreano, Eslovaco, Espanhol, Finlandês, Inglês, Japonês, Norueguês, Português (Portugal), Russo, Turco</target>
+        <note from="developer">Do not translate the names of the languages, leave them just like this.</note>
       </trans-unit>
       <trans-unit id="helptranslate">
         <source>Don’t see your language? Join us and help translate the app:</source>
@@ -34,10 +34,11 @@
       <trans-unit id="helptranslateurl" translate="no">
         <source>https://www.transifex.com/projects/p/checkey</source>
         <target>https://www.transifex.com/projects/p/checkey</target>
+        <note from="developer">Do not translate this.</note>
       </trans-unit>
       <trans-unit id="learnmore">
         <source>***Learn More***</source>
-        <target>***Saiba Mais***</target>
+        <target>***Saber Mais***</target>
       </trans-unit>
       <trans-unit id="aboutus">
         <source>★ ABOUT US: Guardian Project is a group of developers that make secure mobile apps and open-source code for a better tomorrow</source>
@@ -53,11 +54,12 @@
       </trans-unit>
       <trans-unit id="freesoftware">
         <source>★ FREE SOFTWARE: Checkey is free software. You can take a look at our source code, or contribute to help make Checkey even better:</source>
-        <target>★ PROGRAMA GRATUITO: Checkey é um programa gratuito. Pode dar uma vista de olhos no nosso código aberto, ou contribuir para ajudar a tornar Checkey ainda melhor:</target>
+        <target>★ PROGRAMA LIVRE: Checkey é um programa gratuito. Pode dar uma vista de olhos no nosso código aberto, ou contribuir para ajudar a tornar Checkey ainda melhor:</target>
       </trans-unit>
       <trans-unit id="gitrepo" translate="no">
         <source>https://github.com/guardianproject/checkey</source>
         <target>https://github.com/guardianproject/checkey</target>
+        <note from="developer">Do not translate this.</note>
       </trans-unit>
       <trans-unit id="messageus">
         <source>★ MESSAGE US: Are we missing your favorite feature? Found an annoying bug? Please tell us! We’d love to hear from you. Send us an email: support@guardianproject.info or find us in our chat room https://guardianproject.info/contact</source>

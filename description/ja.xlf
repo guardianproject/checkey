@@ -1,5 +1,5 @@
 <?xml version="1.0" ?><xliff version="1.2">
-  <file datatype="plaintext" original="source.xlf" source-language="en">
+  <file datatype="plaintext" original="source.xlf" source-language="en" target-language="ja">
     <header>
       <note from="developer">Google places strick character limits on the various text fields in Google Play. The title is 30 characters, the short description is 80 characters, and the rest of the strings, which all go together in the description, are limited to 4000 characters.</note>
     </header>
@@ -23,9 +23,9 @@
         <target>★ あなたの言語でお使いいただけます: Checkey は次の言語を話す友だちが利用できます:</target>
       </trans-unit>
       <trans-unit id="languagelist" translate="no">
-        <source>Deutsch, English, español, suomi, 日本語, 한국어, Norsk, Türkçe</source>
-        <target>Deutsch, English, español, suomi, 日本語, 한국어, Norsk, Türkçe</target>
-        <note>Do not translate the names of the languages, leave them just like this.</note>
+        <source>Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe</source>
+        <target>Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe</target>
+        <note from="developer">Do not translate the names of the languages, leave them just like this.</note>
       </trans-unit>
       <trans-unit id="helptranslate">
         <source>Don’t see your language? Join us and help translate the app:</source>
@@ -34,6 +34,7 @@
       <trans-unit id="helptranslateurl" translate="no">
         <source>https://www.transifex.com/projects/p/checkey</source>
         <target>https://www.transifex.com/projects/p/checkey</target>
+        <note from="developer">Do not translate this.</note>
       </trans-unit>
       <trans-unit id="learnmore">
         <source>***Learn More***</source>
@@ -58,6 +59,7 @@
       <trans-unit id="gitrepo" translate="no">
         <source>https://github.com/guardianproject/checkey</source>
         <target>https://github.com/guardianproject/checkey</target>
+        <note from="developer">Do not translate this.</note>
       </trans-unit>
       <trans-unit id="messageus">
         <source>★ MESSAGE US: Are we missing your favorite feature? Found an annoying bug? Please tell us! We’d love to hear from you. Send us an email: support@guardianproject.info or find us in our chat room https://guardianproject.info/contact</source>

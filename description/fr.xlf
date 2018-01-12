@@ -6,7 +6,7 @@
     <body>
       <trans-unit id="title" maxwidth="30" size-unit="char">
         <source>Checkey: info on local apps</source>
-        <target>Vériclé: infos applis locales</target>
+        <target>Checkey : infos applis locales</target>
         <note from="developer">This is limited by Google to 30 characters</note>
       </trans-unit>
       <trans-unit id="shortdescription" maxwidth="80" size-unit="char">
@@ -16,11 +16,11 @@
       </trans-unit>
       <trans-unit id="intro">
         <source>Checkey is a utility for getting information about the APKs that are installed on your device. Starting with a list of all of the apps that you have installed on your device, it will show you the APK signature with a single touch, and provides links to virustotal.com and androidobservatory.org to easily access the profiles of that APK. It will also let you export the signing certificate and generate ApkSignaturePin pin files for use with the TrustedIntents library.</source>
-        <target>Vériclé est un utilitaire permettant de recueillir des informations sur les APK installés sur votre appareil. En partant d'une liste de toutes les applis installées sur votre appareil, Vériclé vous présentera la signature de l'APK en un seul toucher, et vous offrira des liens vers virustotal.com et androidobservatory.org afin d'accéder aisément aux profils de cet APK. Il vous permettra aussi d'exporter le certificat de signature et de générer des fichiers NIP ApkSignaturePin pour les utiliser avec la bibliothèque TrustedIntents.</target>
+        <target>Checkey est un utilitaire permettant de recueillir des informations sur les APK installés sur votre appareil. En partant d'une liste de toutes les applis installées sur votre appareil, Vériclé vous présentera la signature de l'APK en un seul toucher, et vous offrira des liens vers virustotal.com et androidobservatory.org afin d'accéder aisément aux profils de cet APK. Il vous permettra aussi d'exporter le certificat de signature et de générer des fichiers NIP ApkSignaturePin pour les utiliser avec la bibliothèque TrustedIntents.</target>
       </trans-unit>
       <trans-unit id="wespeakyourlanguage">
         <source>★ WE SPEAK YOUR LANGUAGE: Checkey is available for friends who speak:</source>
-        <target>★ NOUS PARLONS VOTRE LANGUE : Vériclé est proposé à nos amis parlant :</target>
+        <target>★ NOUS PARLONS VOTRE LANGUE : Checkey est proposé à nos amis parlant :</target>
       </trans-unit>
       <trans-unit id="languagelist" translate="no">
         <source>Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe</source>
@@ -54,7 +54,7 @@
       </trans-unit>
       <trans-unit id="freesoftware">
         <source>★ FREE SOFTWARE: Checkey is free software. You can take a look at our source code, or contribute to help make Checkey even better:</source>
-        <target>★ LOGICIEL LIBRE : Vériclé est un logiciel libre. Vous pouvez regarder notre code source, ou contribuer en aidant à encore améliorer Vériclé :</target>
+        <target>★ LOGICIEL LIBRE : Checkey est un logiciel libre. Vous pouvez regarder notre code source, ou contribuer en aidant à encore améliorer Checkey :</target>
       </trans-unit>
       <trans-unit id="gitrepo" translate="no">
         <source>https://github.com/guardianproject/checkey</source>
@@ -63,7 +63,7 @@
       </trans-unit>
       <trans-unit id="messageus">
         <source>★ MESSAGE US: Are we missing your favorite feature? Found an annoying bug? Please tell us! We’d love to hear from you. Send us an email: support@guardianproject.info or find us in our chat room https://guardianproject.info/contact</source>
-        <target>★ CONTACTEZ-NOUS : votre fonction favorite est absente ? Vous avez trouvé un bogue ennuyant ? Nous aimerions que vous nous en fassiez part ! Envoyez-nous un courriel : support@guardianproject.info ou trouvez-nous dans notre clavardoir https://guardianproject.info/contact</target>
+        <target>★ CONTACTEZ-NOUS : votre fonction favorite est-elle absente ? Avez-vous avez trouvé un bogue gênant ? Nous aimerions que vous nous en fassiez part ! Envoyez-nous un courriel : support@guardianproject.info ou trouvez-nous dans notre salon de discussion https://guardianproject.info/contact</target>
       </trans-unit>
     </body>
   </file>
