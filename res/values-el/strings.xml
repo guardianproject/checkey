@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Checkey</string>
+  <string name="app_description">Το Checkey είναι ένα βοηθητικό πρόγραμμα για τη λήψη πληροφοριών σχετικά με τα APK που είναι εγκατεστημένα στη συσκευή σας. Ξεκινώντας με μια λίστα όλων των εφαρμογών που έχετε εγκαταστήσει στη συσκευή σας, θα σας δείξει την υπογραφή του APK με ένα μόνο άγγιγμα και θα παρέχει συνδέσμους στο virustotal.com και το androidobservatory.org για εύκολη πρόσβαση στα προφίλ αυτού του APK. Θα σας επιτρέψει επίσης να εξάγετε το πιστοποιητικό υπογραφής και να δημιουργήσετε αρχεία pin ApkSignaturePin για χρήση με τη βιβλιοθήκη TrustedIntents.</string>
+  <string name="icon">εικονίδιο</string>
+  <string name="action_settings">Ρυθμίσεις</string>
+  <string name="no_applications_found">Δεν βρέθηκαν εφαρμογές</string>
+  <string name="details">Λεπτομέριες</string>
+  <string name="virustotal">VirusTotal</string>
+  <string name="by_package_name">Όνομα Πακέτου</string>
+  <string name="by_apk_hash">APK Hash</string>
+  <string name="by_signing_certificate">Πιστοποιητικό Υπογραφής</string>
+  <string name="open_in_browser">Ανοιγμα σε πρόγραμμα περιήγησης</string>
+  <string name="share">Κοινή χρήση</string>
+  <string name="share_url_using">Κοινή χρήση διεύθυνσης URL χρησιμοποιώντας:</string>
+  <string name="save">Αποθήκευση…</string>
+  <string name="save_cert_using">Αποθήκευση πιστοποιητικού χρησιμοποιώντας:</string>
+  <string name="generate_pin">Δημιουργία Pin</string>
+  <string name="package_name">\'Ονομα Πακέτου:</string>
+  <string name="apk_path">Διαδρομή ΑΡΚ:</string>
+  <string name="public_apk_path">Δημόσια Διαδρομή ΑΡΚ:</string>
+  <string name="data_directory">Κατάλογος Δεδομένων:</string>
+  <string name="key_type">Τύπος Κλειδιού:</string>
+  <string name="signature_type">Τύπος Υπογραφής:</string>
+  <string name="target_sdk_version">SDK Έκδοση Προορισμού:</string>
+  <string name="version">Έκδοση:</string>
+  <string name="created">Δημιουργήθηκε:</string>
+  <string name="expires">Λήγει:</string>
+  <string name="subject">Θέμα:</string>
+  <string name="issuer">Εκδότης:</string>
+  <string name="serial">Σειριακός:</string>
+  <!--error messages-->
+  <string name="error_cannot_make_fingerprint">Δεν είναι δυνατή η δημιουργία δακτυλικού αποτυπώματος από το πιστοποιητικό υπογραφής!</string>
+  <string name="error_no_app_entry">Δεν βρέθηκε καταχώρηση εφαρμογής!</string>
+</resources>
