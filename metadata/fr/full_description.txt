@@ -1,0 +1,13 @@
+Checkey est un utilitaire permettant de recueillir des informations sur les APK installés sur votre appareil. En partant d'une liste de toutes les applis installées sur votre appareil, Vériclé vous présentera la signature de l'APK en un seul toucher, et vous offrira des liens vers virustotal.com et androidobservatory.org afin d'accéder aisément aux profils de cet APK. Il vous permettra aussi d'exporter le certificat de signature et de générer des fichiers NIP ApkSignaturePin pour les utiliser avec la bibliothèque TrustedIntents.
+★ NOUS PARLONS VOTRE LANGUE : Checkey est proposé à nos amis parlant :
+Deutsch, English, español, suomi, 日本語, 한국어, Norsk bokmål, português (Portugal), Русский, Slovenščina, Türkçe, français
+Vous ne voyez pas votre langue ? Rejoignez-nous et aidez-nous à traduire l'appli :
+https://www.transifex.com/projects/p/checkey
+
+***En apprendre davantage***
+★ À PROPOS DE NOUS : le Projet Guardian est un groupe de développeurs créant des applis mobiles sécurisées et du code ouvert pour des lendemains meilleurs.
+★ NOTRE SITE WEB : https://GuardianProject.info
+★ SUR TWITTER: https://twitter.com/guardianproject
+★ LOGICIEL LIBRE : Checkey est un logiciel libre. Vous pouvez regarder notre code source, ou contribuer en aidant à encore améliorer Checkey :
+https://github.com/guardianproject/checkey
+★ CONTACTEZ-NOUS : votre fonction favorite est-elle absente ? Avez-vous avez trouvé un bogue gênant ? Nous aimerions que vous nous en fassiez part ! Envoyez-nous un courriel : support@guardianproject.info ou trouvez-nous dans notre salon de discussion https://guardianproject.info/contact
