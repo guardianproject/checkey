@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+set -e
+set -x
+
+for f in `find $(dirname $0)/../app/src/ $(dirname $0)/../metadata -type f -name \*.png`; do
+    echo $f | grep -Eo '\.9\.png$' && continue  # do not optimize 9-patch, it breaks them
+    tmpfile=$(mktemp)
+    #aapt singleCrunch -v -i $f -o $tmpfile
+    zopflipng --iterations=50 --filters=01234mepb --lossy_8bit --lossy_transparent -y $f $tmpfile
+    mv $tmpfile $f
+done
