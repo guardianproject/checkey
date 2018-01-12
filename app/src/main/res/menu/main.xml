@@ -1,45 +1,45 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="info.guardianproject.checkey.MainActivity" >
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="info.guardianproject.checkey.MainActivity">
 
     <item
-        android:id="@+id/details"
-        android:icon="@android:drawable/ic_dialog_info"
-        android:title="@string/details"
-        app:showAsAction="ifRoom"/>
+            android:id="@+id/details"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="@string/details"
+            app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/virustotal"
-        android:icon="@drawable/virustotal"
-        android:title="@string/virustotal"
-        app:showAsAction="ifRoom|withText"/>
+            android:id="@+id/virustotal"
+            android:icon="@drawable/virustotal"
+            android:title="@string/virustotal"
+            app:showAsAction="ifRoom|withText"/>
     <item
-        android:id="@+id/by_apk_hash"
-        android:title="@string/by_apk_hash"
-        app:showAsAction="ifRoom|withText"/>
+            android:id="@+id/by_apk_hash"
+            android:title="@string/by_apk_hash"
+            app:showAsAction="ifRoom|withText"/>
     <item
-        android:id="@+id/by_package_name"
-        android:title="@string/by_package_name"
-        app:showAsAction="ifRoom|withText"/>
+            android:id="@+id/by_package_name"
+            android:title="@string/by_package_name"
+            app:showAsAction="ifRoom|withText"/>
     <item
-        android:id="@+id/by_signing_certificate"
-        android:title="@string/by_signing_certificate"
-        app:showAsAction="ifRoom|withText"/>
+            android:id="@+id/by_signing_certificate"
+            android:title="@string/by_signing_certificate"
+            app:showAsAction="ifRoom|withText"/>
     <item
-        android:id="@+id/generate_pin"
-        android:icon="@android:drawable/ic_menu_set_as"
-        android:title="@string/generate_pin"
-        app:showAsAction="ifRoom|withText"/>
+            android:id="@+id/generate_pin"
+            android:icon="@android:drawable/ic_menu_set_as"
+            android:title="@string/generate_pin"
+            app:showAsAction="ifRoom|withText"/>
     <item
-        android:id="@+id/save"
-        android:icon="@android:drawable/ic_menu_save"
-        android:title="@string/save"
-        app:showAsAction="ifRoom|withText"/>
+            android:id="@+id/save"
+            android:icon="@android:drawable/ic_menu_save"
+            android:title="@string/save"
+            app:showAsAction="ifRoom|withText"/>
     <item
-        android:id="@+id/action_settings"
-        android:icon="@android:drawable/ic_menu_preferences"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never"/>
+            android:id="@+id/action_settings"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:orderInCategory="100"
+            android:title="@string/action_settings"
+            app:showAsAction="never"/>
 
 </menu>

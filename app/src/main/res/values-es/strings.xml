@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">Checkey</string>
-  <string name="icon">Ícono</string>
-  <string name="action_settings">Ajustes</string>
-  <string name="no_applications_found">No se encontraron aplicaciones.</string>
-  <string name="virustotal">VirusTotal</string>
-  <string name="by_package_name">Nombre del paquete</string>
-  <string name="by_apk_hash">APK Hash</string>
-  <string name="by_signing_certificate">Certificado de firma</string>
-  <string name="open_in_browser">Abrir en el navegador</string>
-  <string name="share">Compartir</string>
-  <string name="share_url_using">Compartir URL con:</string>
-  <string name="save">Guardar…</string>
-  <string name="save_cert_using">Guardar certificado con:</string>
-  <string name="generate_pin">Generar Pin</string>
+    <string name="app_name">Checkey</string>
+    <string name="icon">Ícono</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="no_applications_found">No se encontraron aplicaciones.</string>
+    <string name="virustotal">VirusTotal</string>
+    <string name="by_package_name">Nombre del paquete</string>
+    <string name="by_apk_hash">APK Hash</string>
+    <string name="by_signing_certificate">Certificado de firma</string>
+    <string name="open_in_browser">Abrir en el navegador</string>
+    <string name="share">Compartir</string>
+    <string name="share_url_using">Compartir URL con:</string>
+    <string name="save">Guardar…</string>
+    <string name="save_cert_using">Guardar certificado con:</string>
+    <string name="generate_pin">Generar Pin</string>
 </resources>

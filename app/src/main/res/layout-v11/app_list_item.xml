@@ -13,44 +13,44 @@
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="?android:attr/activatedBackgroundIndicator"
-    android:minHeight="?android:attr/listPreferredItemHeight"
-    android:paddingBottom="2dip"
-    android:paddingTop="2dip" >
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="?android:attr/activatedBackgroundIndicator"
+              android:minHeight="?android:attr/listPreferredItemHeight"
+              android:paddingBottom="2dip"
+              android:paddingTop="2dip">
 
     <ImageView
-        android:id="@+id/icon"
-        android:layout_width="48dip"
-        android:layout_height="48dip"
-        android:layout_marginLeft="?attr/listPreferredItemPaddingLeft"
-        android:layout_marginStart="?attr/listPreferredItemPaddingLeft"
-        android:layout_marginTop="6dip"
-        tools:ignore="ContentDescription" />
-
-    <TwoLineListItem
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:mode="twoLine" >
-
-        <TextView
-            android:id="@+id/application_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/icon"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
             android:layout_marginLeft="?attr/listPreferredItemPaddingLeft"
             android:layout_marginStart="?attr/listPreferredItemPaddingLeft"
             android:layout_marginTop="6dip"
-            android:textAppearance="?attr/textAppearanceListItem" />
+            tools:ignore="ContentDescription"/>
 
-        <TextView
-            android:id="@+id/package_name"
+    <TwoLineListItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/application_label"
-            android:layout_below="@+id/application_label"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:mode="twoLine">
+
+        <TextView
+                android:id="@+id/application_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="?attr/listPreferredItemPaddingLeft"
+                android:layout_marginStart="?attr/listPreferredItemPaddingLeft"
+                android:layout_marginTop="6dip"
+                android:textAppearance="?attr/textAppearanceListItem"/>
+
+        <TextView
+                android:id="@+id/package_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/application_label"
+                android:layout_below="@+id/application_label"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
     </TwoLineListItem>
 
 </LinearLayout>

@@ -1,28 +1,34 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">Checkey</string>
-  <string name="app_description">Checkey  это программа для получения информации относительно APK     которые установлены на Вашем устройстве. Начиная со списка всех приложений установленых на Вашем устройстве она определит подписи APK по одному касанию и укажет ссылки на virustotal.com и androidabservatory.org  для удобного доступа к профилям этих APK. Она так же поможет отправить номера сертификатов и создаст файлы номеров ApkSignaturePin для использование с библиотекой TrustedIntents.</string>
-  <string name="icon">Ярлык</string>
-  <string name="action_settings">Настройки</string>
-  <string name="no_applications_found">Не обнаружено программ.</string>
-  <string name="virustotal">VirusTotal</string>
-  <string name="by_package_name">Наименование пакета программ</string>
-  <string name="by_apk_hash">Хэш APK</string>
-  <string name="by_signing_certificate">Код сертификата</string>
-  <string name="open_in_browser">Открыт в браузере.</string>
-  <string name="share">Использует совместно</string>
-  <string name="share_url_using">Совместное использование URL:</string>
-  <string name="save"> Сохранение…</string>
-  <string name="save_cert_using">Записать сертификат используя:</string>
-  <string name="generate_pin">Создание номера</string>
-  <string name="key_type">Тип ключа</string>
-  <string name="signature_type">Тип подписи:</string>
-  <string name="version">Версия:</string>
-  <string name="created">Создан:</string>
-  <string name="expires">Срок истекает:</string>
-  <string name="subject">Объект:</string>
-  <string name="issuer">Источник:</string>
-  <string name="serial">Серийный номер:</string>
-  <!--error messages-->
-  <string name="error_cannot_make_fingerprint">Нет возможности получить отпечаток пальца или сертификат подписи.</string>
+    <string name="app_name">Checkey</string>
+    <string name="app_description">Checkey это программа для получения информации относительно APK которые установлены
+        на Вашем устройстве. Начиная со списка всех приложений установленых на Вашем устройстве она определит подписи
+        APK по одному касанию и укажет ссылки на virustotal.com и androidabservatory.org для удобного доступа к
+        профилям этих APK. Она так же поможет отправить номера сертификатов и создаст файлы номеров ApkSignaturePin
+        для использование с библиотекой TrustedIntents.
+    </string>
+    <string name="icon">Ярлык</string>
+    <string name="action_settings">Настройки</string>
+    <string name="no_applications_found">Не обнаружено программ.</string>
+    <string name="virustotal">VirusTotal</string>
+    <string name="by_package_name">Наименование пакета программ</string>
+    <string name="by_apk_hash">Хэш APK</string>
+    <string name="by_signing_certificate">Код сертификата</string>
+    <string name="open_in_browser">Открыт в браузере.</string>
+    <string name="share">Использует совместно</string>
+    <string name="share_url_using">Совместное использование URL:</string>
+    <string name="save">Сохранение…</string>
+    <string name="save_cert_using">Записать сертификат используя:</string>
+    <string name="generate_pin">Создание номера</string>
+    <string name="key_type">Тип ключа</string>
+    <string name="signature_type">Тип подписи:</string>
+    <string name="version">Версия:</string>
+    <string name="created">Создан:</string>
+    <string name="expires">Срок истекает:</string>
+    <string name="subject">Объект:</string>
+    <string name="issuer">Источник:</string>
+    <string name="serial">Серийный номер:</string>
+    <!--error messages-->
+    <string name="error_cannot_make_fingerprint">Нет возможности получить отпечаток пальца или сертификат подписи.
+    </string>
 </resources>

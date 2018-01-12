@@ -1,35 +1,43 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">Checkey</string>
-  <string name="app_description">Checkey é um utilitário para obter informação sobre as APKs que estão instaladas no seu dispositivo. Começando com uma lista de todas as apps que estão instaladas no seu dispositivo. Esta irá mostrar-lhe a assinatura APK com um único toque, e proporciona hiperligações para virustotal.com e androidobservatory.org para aceder facilmente aos perfis dessa APK. Esta também irá deixá-lo exportar o certificado de assinatura e gerar os ficheiros código ApkSignaturePin para usar com a biblioteca TrustedIntents.</string>
-  <string name="icon">ícone</string>
-  <string name="action_settings">Definições</string>
-  <string name="no_applications_found">Não foram encontradas aplicações</string>
-  <string name="details">Detalhes</string>
-  <string name="virustotal">Total de Vírus</string>
-  <string name="by_package_name">Nome do Pacote</string>
-  <string name="by_apk_hash">Cardinal (#) APK</string>
-  <string name="by_signing_certificate">Certificado de Assinatura</string>
-  <string name="open_in_browser">Abrir no Navegador</string>
-  <string name="share">Compartilhar</string>
-  <string name="share_url_using">Compartilhar URL, usando:</string>
-  <string name="save">Guardar…</string>
-  <string name="save_cert_using">Guardar certificado, usando:</string>
-  <string name="generate_pin">Gerar Código</string>
-  <string name="package_name">Nome do Pacote:</string>
-  <string name="apk_path">Caminho APK:</string>
-  <string name="public_apk_path">Caminho Público APK:</string>
-  <string name="data_directory">Diretoria de Dados:</string>
-  <string name="key_type">Tipo de  Chave:</string>
-  <string name="signature_type">Tipo de Assinatura:</string>
-  <string name="target_sdk_version">Versão SDK Saída:</string>
-  <string name="version">Versão:</string>
-  <string name="created">Criada:</string>
-  <string name="expires">Expira:</string>
-  <string name="subject">Assunto:</string>
-  <string name="issuer">Emissor:</string>
-  <string name="serial">Nr. de Série:</string>
-  <!--error messages-->
-  <string name="error_cannot_make_fingerprint">Não consegue criar a assinatura digital do certificado de assinatura!</string>
-  <string name="error_no_app_entry">Não foi encontrada nenhuma entrada de app!</string>
+    <string name="app_name">Checkey</string>
+    <string name="app_description">Checkey é um utilitário para obter informação sobre as APKs que estão instaladas no
+        seu dispositivo. Começando com uma lista de todas as apps que estão instaladas no seu dispositivo. Esta irá
+        mostrar-lhe a assinatura APK com um único toque, e proporciona hiperligações para virustotal.com e
+        androidobservatory.org para aceder facilmente aos perfis dessa APK. Esta também irá deixá-lo exportar o
+        certificado de assinatura e gerar os ficheiros código ApkSignaturePin para usar com a biblioteca
+        TrustedIntents.
+    </string>
+    <string name="icon">ícone</string>
+    <string name="action_settings">Definições</string>
+    <string name="no_applications_found">Não foram encontradas aplicações</string>
+    <string name="details">Detalhes</string>
+    <string name="virustotal">Total de Vírus</string>
+    <string name="by_package_name">Nome do Pacote</string>
+    <string name="by_apk_hash">Cardinal (#) APK</string>
+    <string name="by_signing_certificate">Certificado de Assinatura</string>
+    <string name="open_in_browser">Abrir no Navegador</string>
+    <string name="share">Compartilhar</string>
+    <string name="share_url_using">Compartilhar URL, usando:</string>
+    <string name="save">Guardar…</string>
+    <string name="save_cert_using">Guardar certificado, usando:</string>
+    <string name="generate_pin">Gerar Código</string>
+    <string name="package_name">Nome do Pacote:</string>
+    <string name="apk_path">Caminho APK:</string>
+    <string name="public_apk_path">Caminho Público APK:</string>
+    <string name="data_directory">Diretoria de Dados:</string>
+    <string name="key_type">Tipo de Chave:</string>
+    <string name="signature_type">Tipo de Assinatura:</string>
+    <string name="target_sdk_version">Versão SDK Saída:</string>
+    <string name="version">Versão:</string>
+    <string name="created">Criada:</string>
+    <string name="expires">Expira:</string>
+    <string name="subject">Assunto:</string>
+    <string name="issuer">Emissor:</string>
+    <string name="serial">Nr. de Série:</string>
+    <!--error messages-->
+    <string name="error_cannot_make_fingerprint">Não consegue criar a assinatura digital do certificado de
+        assinatura!
+    </string>
+    <string name="error_no_app_entry">Não foi encontrada nenhuma entrada de app!</string>
 </resources>

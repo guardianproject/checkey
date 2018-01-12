@@ -1,35 +1,40 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">Checkey</string>
-  <string name="app_description">Checkey telefonunuzda yüklü olan APK\'lar hakkında bilgi sahibi olmanıza yarayan bir araçtır. Telefonunuzda yüklü olan tüm uygulamaları içeren bir liste ile açılır, size tek tıklamayla APK imzasını gösterir bu APK\'nun profillerine ulaşabilmeniz için virustotal.com ve androidobservatory.org adreslerine bağlantılar sunar. Ayrıca TrustedIntents kütüphanesinde kullanabilmeniz için imzalama sertifikalarını dışa aktararak ApkSignaturePin pin dosyaları oluşturmanıza olanak sağlar.</string>
-  <string name="icon">ikon</string>
-  <string name="action_settings">Ayarlar</string>
-  <string name="no_applications_found">Hiç uygulama bulunamadı</string>
-  <string name="details">Ayrıntılar:</string>
-  <string name="virustotal">VirusTotal</string>
-  <string name="by_package_name">Paket İsmi</string>
-  <string name="by_apk_hash">APK Hash</string>
-  <string name="by_signing_certificate">İmza Sertifikası</string>
-  <string name="open_in_browser">Tarayıcıda aç</string>
-  <string name="share">Paylaş</string>
-  <string name="share_url_using">Bunu kullanarak URL paylaş:</string>
-  <string name="save">Kaydet…</string>
-  <string name="save_cert_using">Bunu kullanarak sertifikayı kaydet:</string>
-  <string name="generate_pin">Pin Oluştur</string>
-  <string name="package_name">Paket İsmi:</string>
-  <string name="apk_path">APK Yolu:</string>
-  <string name="public_apk_path">Açık APK Yolu:</string>
-  <string name="data_directory">Veri Dizini:</string>
-  <string name="key_type">Anahtar Tipi:</string>
-  <string name="signature_type">İmza Tipi:</string>
-  <string name="target_sdk_version">Hedeflenen SDK Sürümü:</string>
-  <string name="version">Sürüm:</string>
-  <string name="created">Oluşturma:</string>
-  <string name="expires">Son Kullanma:</string>
-  <string name="subject">Konu:</string>
-  <string name="issuer">Gönderen:</string>
-  <string name="serial">Seri Numarası:</string>
-  <!--error messages-->
-  <string name="error_cannot_make_fingerprint">İmzalama sertifikası için parmak izi oluşturulamıyor!</string>
-  <string name="error_no_app_entry">Uygulama girdisi bulunamadı!</string>
+    <string name="app_name">Checkey</string>
+    <string name="app_description">Checkey telefonunuzda yüklü olan APK\'lar hakkında bilgi sahibi olmanıza yarayan
+        bir araçtır. Telefonunuzda yüklü olan tüm uygulamaları içeren bir liste ile açılır, size tek tıklamayla APK
+        imzasını gösterir bu APK\'nun profillerine ulaşabilmeniz için virustotal.com ve androidobservatory.org
+        adreslerine bağlantılar sunar. Ayrıca TrustedIntents kütüphanesinde kullanabilmeniz için imzalama
+        sertifikalarını dışa aktararak ApkSignaturePin pin dosyaları oluşturmanıza olanak sağlar.
+    </string>
+    <string name="icon">ikon</string>
+    <string name="action_settings">Ayarlar</string>
+    <string name="no_applications_found">Hiç uygulama bulunamadı</string>
+    <string name="details">Ayrıntılar:</string>
+    <string name="virustotal">VirusTotal</string>
+    <string name="by_package_name">Paket İsmi</string>
+    <string name="by_apk_hash">APK Hash</string>
+    <string name="by_signing_certificate">İmza Sertifikası</string>
+    <string name="open_in_browser">Tarayıcıda aç</string>
+    <string name="share">Paylaş</string>
+    <string name="share_url_using">Bunu kullanarak URL paylaş:</string>
+    <string name="save">Kaydet…</string>
+    <string name="save_cert_using">Bunu kullanarak sertifikayı kaydet:</string>
+    <string name="generate_pin">Pin Oluştur</string>
+    <string name="package_name">Paket İsmi:</string>
+    <string name="apk_path">APK Yolu:</string>
+    <string name="public_apk_path">Açık APK Yolu:</string>
+    <string name="data_directory">Veri Dizini:</string>
+    <string name="key_type">Anahtar Tipi:</string>
+    <string name="signature_type">İmza Tipi:</string>
+    <string name="target_sdk_version">Hedeflenen SDK Sürümü:</string>
+    <string name="version">Sürüm:</string>
+    <string name="created">Oluşturma:</string>
+    <string name="expires">Son Kullanma:</string>
+    <string name="subject">Konu:</string>
+    <string name="issuer">Gönderen:</string>
+    <string name="serial">Seri Numarası:</string>
+    <!--error messages-->
+    <string name="error_cannot_make_fingerprint">İmzalama sertifikası için parmak izi oluşturulamıyor!</string>
+    <string name="error_no_app_entry">Uygulama girdisi bulunamadı!</string>
 </resources>

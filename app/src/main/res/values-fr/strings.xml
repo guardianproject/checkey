@@ -1,35 +1,43 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">Checkey</string>
-  <string name="app_description">Checkey est un utilitaire permettant de recueillir les informations des APK installés sur votre appareil. En partant d\'une liste de toutes les applis installées sur votre appareil, Vériclé vous présentera la signature de l\'APK en un seul toucher, et vous offrira des liens vers virustotal.com et androidobservatory.org afin d\'accéder aisément aux profils de cet APK. Il vous permettra aussi d\'exporter le certificat de signature et de générer des fichiers NIP ApkSignaturePin pour les utiliser avec la bibliothèque TrustedIntents.</string>
-  <string name="icon">Icône</string>
-  <string name="action_settings">Paramètres</string>
-  <string name="no_applications_found">Aucune application trouvée</string>
-  <string name="details">Détails</string>
-  <string name="virustotal">VirusTotal</string>
-  <string name="by_package_name">Nom de paquet</string>
-  <string name="by_apk_hash">Empreinte numérique de l\'APK</string>
-  <string name="by_signing_certificate">Certificat de signature</string>
-  <string name="open_in_browser">Ouvrir dans le navigateur</string>
-  <string name="share">Partager</string>
-  <string name="share_url_using">Partager l\'URL en utilisant :</string>
-  <string name="save">Enregistrer…</string>
-  <string name="save_cert_using">Enregistrer le certificat avec :</string>
-  <string name="generate_pin">Générer un NIP</string>
-  <string name="package_name">Nom de paquet :</string>
-  <string name="apk_path">Chemin de l\'APK :</string>
-  <string name="public_apk_path">Chemin public de l\'APK :</string>
-  <string name="data_directory">Répertoire de données :</string>
-  <string name="key_type">Type de clé :</string>
-  <string name="signature_type">Type de signature :</string>
-  <string name="target_sdk_version">Version ciblée du SDK :</string>
-  <string name="version">Version :</string>
-  <string name="created">Crée :</string>
-  <string name="expires">Expire :</string>
-  <string name="subject">Objet :</string>
-  <string name="issuer">Émetteur :</string>
-  <string name="serial">No de série :</string>
-  <!--error messages-->
-  <string name="error_cannot_make_fingerprint">La création de l\'empreinte du certificat de signature est impossible !</string>
-  <string name="error_no_app_entry">Aucune entrée d\'appli trouvée !</string>
+    <string name="app_name">Checkey</string>
+    <string name="app_description">Checkey est un utilitaire permettant de recueillir les informations des APK
+        installés sur votre appareil. En partant d\'une liste de toutes les applis installées sur votre appareil,
+        Vériclé vous présentera la signature de l\'APK en un seul toucher, et vous offrira des liens vers
+        virustotal.com et androidobservatory.org afin d\'accéder aisément aux profils de cet APK. Il vous permettra
+        aussi d\'exporter le certificat de signature et de générer des fichiers NIP ApkSignaturePin pour les utiliser
+        avec la bibliothèque TrustedIntents.
+    </string>
+    <string name="icon">Icône</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="no_applications_found">Aucune application trouvée</string>
+    <string name="details">Détails</string>
+    <string name="virustotal">VirusTotal</string>
+    <string name="by_package_name">Nom de paquet</string>
+    <string name="by_apk_hash">Empreinte numérique de l\'APK</string>
+    <string name="by_signing_certificate">Certificat de signature</string>
+    <string name="open_in_browser">Ouvrir dans le navigateur</string>
+    <string name="share">Partager</string>
+    <string name="share_url_using">Partager l\'URL en utilisant :</string>
+    <string name="save">Enregistrer…</string>
+    <string name="save_cert_using">Enregistrer le certificat avec :</string>
+    <string name="generate_pin">Générer un NIP</string>
+    <string name="package_name">Nom de paquet :</string>
+    <string name="apk_path">Chemin de l\'APK :</string>
+    <string name="public_apk_path">Chemin public de l\'APK :</string>
+    <string name="data_directory">Répertoire de données :</string>
+    <string name="key_type">Type de clé :</string>
+    <string name="signature_type">Type de signature :</string>
+    <string name="target_sdk_version">Version ciblée du SDK :</string>
+    <string name="version">Version :</string>
+    <string name="created">Crée :</string>
+    <string name="expires">Expire :</string>
+    <string name="subject">Objet :</string>
+    <string name="issuer">Émetteur :</string>
+    <string name="serial">No de série :</string>
+    <!--error messages-->
+    <string name="error_cannot_make_fingerprint">La création de l\'empreinte du certificat de signature est impossible
+        !
+    </string>
+    <string name="error_no_app_entry">Aucune entrée d\'appli trouvée !</string>
 </resources>

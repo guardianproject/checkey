@@ -1,35 +1,42 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">Checkey</string>
-  <string name="app_description">Checkey on apuohjelma, jolla saa tietoja laiteeseen asennetuista APK-pakkaustiedostoista. Ohjelma luettelee aluksi kaikki laitteeseen asennetut sovellukset ja näyttää APK-allekirjoituksen yhdellä kosketuksella sekä tarjoaa linkit virustotal.com- ja androidobservatory.com-sivuistoille, joilta saa helposti kyseisen APK-pakkaustiedoston profiilit. Ohjelma sallii sinun myös viedä allekirjoitusvarmenteen ja tuottaa ApkSignaturePin-pin-tieodostoja käytettäväksi TrustedIntents-kirjastossa. </string>
-  <string name="icon">kuvake</string>
-  <string name="action_settings">Asetukset</string>
-  <string name="no_applications_found">Yhtään sovellusta ei löytynyt</string>
-  <string name="details">Yksityiskohdat</string>
-  <string name="virustotal">VirusTotal</string>
-  <string name="by_package_name">Pakkausnimi</string>
-  <string name="by_apk_hash">APK-tiiviste</string>
-  <string name="by_signing_certificate">Allekirjoitetaan varmenne</string>
-  <string name="open_in_browser">Avaa selaimessa</string>
-  <string name="share">Jaa</string>
-  <string name="share_url_using">Jaa verkko-osoite käyttäen:</string>
-  <string name="save">Tallenna…</string>
-  <string name="save_cert_using">Tallenna varmenne käyttäen:</string>
-  <string name="generate_pin">Tuota pin-koodi</string>
-  <string name="package_name">Pakkausnimi:</string>
-  <string name="apk_path">APK-polku:</string>
-  <string name="public_apk_path">Julkinen APK-polku:</string>
-  <string name="data_directory">Data-hakemisto:</string>
-  <string name="key_type">Avaintyyppi:</string>
-  <string name="signature_type">Allekirjoitustyyppi:</string>
-  <string name="target_sdk_version">Kohde SDK-versio:</string>
-  <string name="version">Versio:</string>
-  <string name="created">Luotu:</string>
-  <string name="expires">Vanhenee:</string>
-  <string name="subject">Aihe:</string>
-  <string name="issuer">Julkaisija:</string>
-  <string name="serial">Perättäinen:</string>
-  <!--error messages-->
-  <string name="error_cannot_make_fingerprint">Allekirjoitetun varmenteen sormenjäljen tekeminen epäonnistui!</string>
-  <string name="error_no_app_entry">Sovelluskohdetta ei löytynyt!</string>
+    <string name="app_name">Checkey</string>
+    <string name="app_description">Checkey on apuohjelma, jolla saa tietoja laiteeseen asennetuista
+        APK-pakkaustiedostoista. Ohjelma luettelee aluksi kaikki laitteeseen asennetut sovellukset ja näyttää
+        APK-allekirjoituksen yhdellä kosketuksella sekä tarjoaa linkit virustotal.com- ja
+        androidobservatory.com-sivuistoille, joilta saa helposti kyseisen APK-pakkaustiedoston profiilit. Ohjelma
+        sallii sinun myös viedä allekirjoitusvarmenteen ja tuottaa ApkSignaturePin-pin-tieodostoja käytettäväksi
+        TrustedIntents-kirjastossa.
+    </string>
+    <string name="icon">kuvake</string>
+    <string name="action_settings">Asetukset</string>
+    <string name="no_applications_found">Yhtään sovellusta ei löytynyt</string>
+    <string name="details">Yksityiskohdat</string>
+    <string name="virustotal">VirusTotal</string>
+    <string name="by_package_name">Pakkausnimi</string>
+    <string name="by_apk_hash">APK-tiiviste</string>
+    <string name="by_signing_certificate">Allekirjoitetaan varmenne</string>
+    <string name="open_in_browser">Avaa selaimessa</string>
+    <string name="share">Jaa</string>
+    <string name="share_url_using">Jaa verkko-osoite käyttäen:</string>
+    <string name="save">Tallenna…</string>
+    <string name="save_cert_using">Tallenna varmenne käyttäen:</string>
+    <string name="generate_pin">Tuota pin-koodi</string>
+    <string name="package_name">Pakkausnimi:</string>
+    <string name="apk_path">APK-polku:</string>
+    <string name="public_apk_path">Julkinen APK-polku:</string>
+    <string name="data_directory">Data-hakemisto:</string>
+    <string name="key_type">Avaintyyppi:</string>
+    <string name="signature_type">Allekirjoitustyyppi:</string>
+    <string name="target_sdk_version">Kohde SDK-versio:</string>
+    <string name="version">Versio:</string>
+    <string name="created">Luotu:</string>
+    <string name="expires">Vanhenee:</string>
+    <string name="subject">Aihe:</string>
+    <string name="issuer">Julkaisija:</string>
+    <string name="serial">Perättäinen:</string>
+    <!--error messages-->
+    <string name="error_cannot_make_fingerprint">Allekirjoitetun varmenteen sormenjäljen tekeminen epäonnistui!
+    </string>
+    <string name="error_no_app_entry">Sovelluskohdetta ei löytynyt!</string>
 </resources>

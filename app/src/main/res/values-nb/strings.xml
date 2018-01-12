@@ -1,35 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">Checkey</string>
-  <string name="app_description">Checkey er et verktøy for innhenting av informasjon om APK-er installert på din enhet. I førstningen en liste over installerte program, hvis APK-signatur er ett trykk unna. Dernest lenker til virustotal.com og androidobservatory.org for profilering av valgt APK. Programmet lar deg også eksportere signeringssertifikatet og generere ApkSignaturePin pin-kodefiler for bruk med TrustedIntents-biblioteket.</string>
-  <string name="icon">ikon</string>
-  <string name="action_settings">Innstillinger</string>
-  <string name="no_applications_found">Fant ingen programmer</string>
-  <string name="details">Detaljer</string>
-  <string name="virustotal">VirusTotal</string>
-  <string name="by_package_name">Pakkenavn</string>
-  <string name="by_apk_hash">APK-sjekksum</string>
-  <string name="by_signing_certificate">Signerer sertifikat</string>
-  <string name="open_in_browser">Åpne i nettleser</string>
-  <string name="share">Del</string>
-  <string name="share_url_using">Del nettadresse ved bruk av:</string>
-  <string name="save">Lagre…</string>
-  <string name="save_cert_using">Lagre sertifikat ved bruk av:</string>
-  <string name="generate_pin">Opprett pinkode</string>
-  <string name="package_name">Pakkenavn:</string>
-  <string name="apk_path">APK-sti:</string>
-  <string name="public_apk_path">Offentlig APK-sti:</string>
-  <string name="data_directory">Datamappe:</string>
-  <string name="key_type">Nøkkeltype:</string>
-  <string name="signature_type">Type signatur:</string>
-  <string name="target_sdk_version">SDK-versjon mål:</string>
-  <string name="version">Versjon:</string>
-  <string name="created">Opprettet:</string>
-  <string name="expires">Utløper:</string>
-  <string name="subject">Emne:</string>
-  <string name="issuer">Utsteder:</string>
-  <string name="serial">Serienummer:</string>
-  <!--error messages-->
-  <string name="error_cannot_make_fingerprint">Kan ikke opprette fingeravtrykk av signeringssertifikatet!</string>
-  <string name="error_no_app_entry">Ingen programoppføring funnet!</string>
+    <string name="app_name">Checkey</string>
+    <string name="app_description">Checkey er et verktøy for innhenting av informasjon om APK-er installert på din
+        enhet. I førstningen en liste over installerte program, hvis APK-signatur er ett trykk unna. Dernest lenker
+        til virustotal.com og androidobservatory.org for profilering av valgt APK. Programmet lar deg også eksportere
+        signeringssertifikatet og generere ApkSignaturePin pin-kodefiler for bruk med TrustedIntents-biblioteket.
+    </string>
+    <string name="icon">ikon</string>
+    <string name="action_settings">Innstillinger</string>
+    <string name="no_applications_found">Fant ingen programmer</string>
+    <string name="details">Detaljer</string>
+    <string name="virustotal">VirusTotal</string>
+    <string name="by_package_name">Pakkenavn</string>
+    <string name="by_apk_hash">APK-sjekksum</string>
+    <string name="by_signing_certificate">Signerer sertifikat</string>
+    <string name="open_in_browser">Åpne i nettleser</string>
+    <string name="share">Del</string>
+    <string name="share_url_using">Del nettadresse ved bruk av:</string>
+    <string name="save">Lagre…</string>
+    <string name="save_cert_using">Lagre sertifikat ved bruk av:</string>
+    <string name="generate_pin">Opprett pinkode</string>
+    <string name="package_name">Pakkenavn:</string>
+    <string name="apk_path">APK-sti:</string>
+    <string name="public_apk_path">Offentlig APK-sti:</string>
+    <string name="data_directory">Datamappe:</string>
+    <string name="key_type">Nøkkeltype:</string>
+    <string name="signature_type">Type signatur:</string>
+    <string name="target_sdk_version">SDK-versjon mål:</string>
+    <string name="version">Versjon:</string>
+    <string name="created">Opprettet:</string>
+    <string name="expires">Utløper:</string>
+    <string name="subject">Emne:</string>
+    <string name="issuer">Utsteder:</string>
+    <string name="serial">Serienummer:</string>
+    <!--error messages-->
+    <string name="error_cannot_make_fingerprint">Kan ikke opprette fingeravtrykk av signeringssertifikatet!</string>
+    <string name="error_no_app_entry">Ingen programoppføring funnet!</string>
 </resources>
