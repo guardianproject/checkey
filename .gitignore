@@ -1,12 +1,11 @@
+*~
+
 # auto-generated files from Android builds
-bin/
-gen/
-build.xml
-ant.properties
-default.properties
-local.properties
-proguard.cfg
-proguard-project.txt
+/.gradle/
+/.idea/
+/app/build/
+/*.properties
+*.iml
 
 # ignore fdroid build dirs
 /build/
