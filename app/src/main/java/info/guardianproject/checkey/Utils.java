@@ -1,4 +1,3 @@
-
 package info.guardianproject.checkey;
 
 import android.content.Context;
@@ -50,7 +49,7 @@ public final class Utils {
             throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance(hashAlgorithm);
         String hash = null;
-        byte [] cert = getCertificate(apkFile);
+        byte[] cert = getCertificate(apkFile);
         if (cert != null)
             hash = toHexString(md.digest(cert));
         md.reset();

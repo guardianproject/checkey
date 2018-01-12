@@ -1,4 +1,3 @@
-
 package info.guardianproject.checkey;
 
 import android.annotation.SuppressLint;
@@ -38,10 +37,52 @@ import java.util.Locale;
 import java.util.Properties;
 
 public class MainActivity extends ActionBarActivity {
-    private final String TAG = "MainActivity";
-
+    private static final String TAG = "MainActivity";
     private static int selectedItem = -1;
     private AppListFragment appListFragment = null;
+
+    static void showCertificateInfo(Activity activity, String packageName) {
+        X509Certificate[] certs = Utils.getX509Certificates(activity, packageName);
+        if (certs == null || certs.length < 1)
+            return;
+        /*
+         * for now, just support the first cert since that is far and away the
+         * most common
+         */
+        X509Certificate cert = certs[0];
+
+        PublicKey publickey = cert.getPublicKey();
+        int size;
+        if (publickey.getAlgorithm().equals("RSA"))
+            size = ((RSAPublicKey) publickey).getModulus().bitLength();
+        else
+            size = publickey.getEncoded().length * 7; // bad estimate
+
+        TextView algorithm = (TextView) activity.findViewById(R.id.key_type);
+        algorithm.setText(publickey.getAlgorithm() + " " + String.valueOf(size) + "bit");
+        TextView keySize = (TextView) activity.findViewById(R.id.signature_type);
+        keySize.setText(cert.getSigAlgName());
+        TextView version = (TextView) activity.findViewById(R.id.version);
+        version.setText(String.valueOf(cert.getVersion()));
+
+        TextView issuerdn = (TextView) activity.findViewById(R.id.issuerdn);
+        issuerdn.setText(cert.getIssuerDN().getName());
+        TextView subjectdn = (TextView) activity.findViewById(R.id.subjectdn);
+        subjectdn.setText(cert.getSubjectDN().getName());
+        TextView serial = (TextView) activity.findViewById(R.id.serial);
+        serial.setText(cert.getSerialNumber().toString(16));
+        TextView created = (TextView) activity.findViewById(R.id.created);
+        created.setText(cert.getNotBefore().toLocaleString());
+        TextView expires = (TextView) activity.findViewById(R.id.expires);
+        expires.setText(cert.getNotAfter().toLocaleString());
+
+        TextView md5 = (TextView) activity.findViewById(R.id.MD5);
+        md5.setText(Utils.getCertificateFingerprint(cert, "MD5").toLowerCase(Locale.ENGLISH));
+        TextView sha1 = (TextView) activity.findViewById(R.id.sha1);
+        sha1.setText(Utils.getCertificateFingerprint(cert, "SHA1").toLowerCase(Locale.ENGLISH));
+        TextView sha256 = (TextView) activity.findViewById(R.id.sha256);
+        sha256.setText(Utils.getCertificateFingerprint(cert, "SHA-256").toLowerCase(Locale.ENGLISH));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,49 +144,6 @@ public class MainActivity extends ActionBarActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    static void showCertificateInfo(Activity activity, String packageName) {
-        X509Certificate[] certs = Utils.getX509Certificates(activity, packageName);
-        if (certs == null || certs.length < 1)
-            return;
-        /*
-         * for now, just support the first cert since that is far and away the
-         * most common
-         */
-        X509Certificate cert = certs[0];
-
-        PublicKey publickey = cert.getPublicKey();
-        int size;
-        if (publickey.getAlgorithm().equals("RSA"))
-            size = ((RSAPublicKey) publickey).getModulus().bitLength();
-        else
-            size = publickey.getEncoded().length * 7; // bad estimate
-
-        TextView algorithm = (TextView) activity.findViewById(R.id.key_type);
-        algorithm.setText(publickey.getAlgorithm() + " " + String.valueOf(size) + "bit");
-        TextView keySize = (TextView) activity.findViewById(R.id.signature_type);
-        keySize.setText(cert.getSigAlgName());
-        TextView version = (TextView) activity.findViewById(R.id.version);
-        version.setText(String.valueOf(cert.getVersion()));
-
-        TextView issuerdn = (TextView) activity.findViewById(R.id.issuerdn);
-        issuerdn.setText(cert.getIssuerDN().getName());
-        TextView subjectdn = (TextView) activity.findViewById(R.id.subjectdn);
-        subjectdn.setText(cert.getSubjectDN().getName());
-        TextView serial = (TextView) activity.findViewById(R.id.serial);
-        serial.setText(cert.getSerialNumber().toString(16));
-        TextView created = (TextView) activity.findViewById(R.id.created);
-        created.setText(cert.getNotBefore().toLocaleString());
-        TextView expires = (TextView) activity.findViewById(R.id.expires);
-        expires.setText(cert.getNotAfter().toLocaleString());
-
-        TextView md5 = (TextView) activity.findViewById(R.id.MD5);
-        md5.setText(Utils.getCertificateFingerprint(cert, "MD5").toLowerCase(Locale.ENGLISH));
-        TextView sha1 = (TextView) activity.findViewById(R.id.sha1);
-        sha1.setText(Utils.getCertificateFingerprint(cert, "SHA1").toLowerCase(Locale.ENGLISH));
-        TextView sha256 = (TextView) activity.findViewById(R.id.sha256);
-        sha256.setText(Utils.getCertificateFingerprint(cert, "SHA-256").toLowerCase(Locale.ENGLISH));
     }
 
     @SuppressLint("WorldReadableFiles")
@@ -299,10 +297,10 @@ public class MainActivity extends ActionBarActivity {
     public static class AppListFragment extends ListFragment implements
             LoaderCallbacks<List<AppEntry>> {
 
-        private AppListAdapter adapter;
-        private ListView listView;
         private static final String STATE_CHECKED = "info.guardianproject.checkey.STATE_CHECKED";
         WebView androidObservatoryView;
+        private AppListAdapter adapter;
+        private ListView listView;
 
         public AppListFragment() {
             super();

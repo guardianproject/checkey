@@ -1,4 +1,3 @@
-
 package info.guardianproject.checkey;
 
 import android.content.ActivityNotFoundException;
