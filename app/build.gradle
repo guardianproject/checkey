@@ -49,6 +49,8 @@ android {
         textReport false
 
         warning 'MissingTranslation'
+        // PackageManager.GET_DISABLED_COMPONENTS was removed in 24
+        warning 'WrongConstant'
     }
 }
 
