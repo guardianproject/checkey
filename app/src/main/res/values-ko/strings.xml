@@ -18,4 +18,6 @@
     <string name="save">저장…</string>
     <string name="save_cert_using">사용한 인증서 저장:</string>
     <string name="generate_pin">핀 생성</string>
+    <string name="version">버전:</string>
+    <!--error messages-->
 </resources>
