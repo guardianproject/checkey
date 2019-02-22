@@ -39,6 +39,17 @@ android {
         versionCode 200
         versionName getVersionName()
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError true
+
+        htmlReport true
+        xmlReport false
+        textReport false
+
+        warning 'MissingTranslation'
+    }
 }
 
 dependencies {
