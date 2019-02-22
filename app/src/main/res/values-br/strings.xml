@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <string name="app_name">Checkey</string>
+    <string name="icon">arlun</string>
+    <string name="action_settings">Arventennoù</string>
+    <string name="no_applications_found">Arload ebet kavet</string>
+    <string name="details">Munudoù</string>
+    <string name="virustotal">VirusTotal</string>
+    <string name="by_package_name">Anv ar pak</string>
+    <string name="by_apk_hash">APK Hash</string>
+    <string name="by_signing_certificate">Sinadur testeni</string>
+    <string name="open_in_browser">Digeriñ er merdeer</string>
+    <string name="share">Rannañ</string>
+    <string name="share_url_using">Rannañ an URL en ur implijout:</string>
+    <string name="save">Enrollañ…</string>
+    <string name="save_cert_using">Enrollañ an testeni en ur ober gant:</string>
+    <string name="generate_pin">Genel ur Pin</string>
+    <string name="package_name">Anv ar pak:</string>
+    <string name="apk_path">Hent APK:</string>
+    <string name="public_apk_path">Hent APK foran:</string>
+    <string name="data_directory">Kavlec\'h ar roadennoù:</string>
+    <string name="key_type">Doare alc\'hwez:</string>
+    <string name="signature_type">Doare sinadur:</string>
+    <string name="version">Version:</string>
+    <string name="created">Krouet:</string>
+    <string name="expires">Diamzeriet a-benn:</string>
+    <string name="subject">Sujed:</string>
+    <string name="issuer">Skigner:</string>
+    <string name="serial">E heuliadenn:</string>
+    <!--error messages-->
+</resources>

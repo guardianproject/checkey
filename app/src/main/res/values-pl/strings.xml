@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <string name="app_name">Checkey</string>
+    <string name="app_description">Checkey to narzędzie do zbierania informacji o plikach APK które są zainstalowane
+        na Twoim urządzeniu. Wystarczy jedno kliknięcie w APK na liście aplikacji aby wyświetlić podpis oraz link do
+        virustotal.com i androidobservatory.org aby mieć łatwy dostęp do profili danego pliku APK. Aplikacja również
+        pozwoli na export certyfikatu oraz generowanie pinów ApkSignaturePin dla użytku z biblioteką TrustedIntents.
+    </string>
+    <string name="icon">ikona</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="no_applications_found">Nie znaleziono aplikacji</string>
+    <string name="details">Szczegóły</string>
+    <string name="virustotal">VirusTotal</string>
+    <string name="by_package_name">Nazwa Pakietu</string>
+    <string name="by_apk_hash">APK Hash</string>
+    <string name="by_signing_certificate">Podpisywanie Certyfikatu</string>
+    <string name="open_in_browser">Otwórz w Przeglądarce</string>
+    <string name="share">Udostępnij</string>
+    <string name="share_url_using">Udostępnij URL używając:</string>
+    <string name="save">Zapisz…</string>
+    <string name="save_cert_using">Zapisz certyfikat używając:</string>
+    <string name="generate_pin">Generuj Pin</string>
+    <string name="package_name">Nazwa Pakietu:</string>
+    <string name="apk_path">Ścieżka APK:</string>
+    <string name="public_apk_path">Publiczna Ścieżka APK:</string>
+    <string name="data_directory">Folder Danych:</string>
+    <string name="key_type">Typ Klucza:</string>
+    <string name="signature_type">Typ Podpisu:</string>
+    <string name="target_sdk_version">Docelowa Wersja SDK</string>
+    <string name="version">Wersja:</string>
+    <string name="created">Utworzono:</string>
+    <string name="expires">Wygasa:</string>
+    <string name="subject">Temat:</string>
+    <string name="issuer">Emitent:</string>
+    <string name="serial">Numer Seryjny:</string>
+    <!--error messages-->
+    <string name="error_cannot_make_fingerprint">Nie można utworzyć fingerprint dla podpisywanego certyfikatu!
+    </string>
+    <string name="error_no_app_entry">Brak wpisów o aplikacji!</string>
+</resources>
