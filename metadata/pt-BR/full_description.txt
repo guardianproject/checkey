@@ -1,10 +1,10 @@
 Checkey é um utilitário para obter informação sobre as APKs que estão instaladas no seu dispositivo. Começando com uma lista de todas as apps que estão instaladas no seu dispositivo. Esta irá mostrar-lhe a assinatura APK com um único toque, e proporciona hiperligações para virustotal.com e androidobservatory.org para aceder facilmente aos perfis dessa APK. Esta também irá deixá-lo exportar o certificado de assinatura e gerar os ficheiros código ApkSignaturePin para usar com a biblioteca TrustedIntents.
-★ NÓS FALAMOS O SEU IDIOMA: Checkey está disponível para os amigos que falam::
-Alemão, Coreano, Eslovaco, Espanhol, Finlandês, Inglês, Japonês, Norueguês, Português (Portugal), Russo, Turco
+
+★ NÓS FALAMOS O SEU IDIOMA: Checkey está disponível para os amigos que falam: Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe
 Não vê o seu idioma? Junte-se a nós e ajude a traduzir a app:
 https://www.transifex.com/projects/p/checkey
 
-***Saber Mais***
+***Saiba Mais***
 ★ SOBRE NÓS: Guardian Project é um grupo de responsáveis pelo desenvolvimento que cria apps móveis seguras e de código aberto para um futuro melhor.
 ★ O NOSSO SÍTIO DA WEB: https://GuardianProject.info
 ★ NO TWITTER: https://twitter.com/guardianproject
