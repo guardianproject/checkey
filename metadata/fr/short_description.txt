@@ -1,1 +1,1 @@
-utilitaire pour recueillir des infos sur les APK installés sur votre appareil. 
+utilitaire pour obtenir des informations sur les APKs qui sont installés sur votre appareil
