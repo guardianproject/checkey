@@ -1,20 +1,14 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Checkey</string>
-    <string name="app_description">Checkey es una utilidad para obtener información acerca de los APKs que están
-        instalados en su dispositivo. Comenzando por una lista de todas las aplicaciones que ha instalado en su
-        dispositivo, le mostrará la firma del APK con una simple pulsación, y le proporcionará enlaces a
-        virustotal.com y androidobservatory.org para facilitar el acceso a los perfiles de ese APK. Además esto le
-        permite exportar el certificado firmante y generar ficheros pin de ApkSignaturePin para su uso con la librería
-        TrustedIntents.
-    </string>
+    <string name="app_description">Checkey es una utilidad para recabar información sobre los APK instalados en su dispositivo. Comenzando por una lista de todas las aplicaciones instaladas, le mostrará la firma de cada APK con solo un toque y le brindará enlaces a virustotal.com y androidobservatory.org para un fácil acceso a los perfiles de los APK. También podrá exportar el certificado de firma y generar archivos ApkSignaturePin para utilizar con la biblioteca TrustedIntents.</string>
     <string name="icon">icono</string>
     <string name="action_settings">Configuración</string>
     <string name="no_applications_found">No se encontraron aplicaciones</string>
     <string name="details">Detalles</string>
     <string name="virustotal">VirusTotal</string>
     <string name="by_package_name">Nombre del paquete</string>
-    <string name="by_apk_hash">Identificador (hash) del APK</string>
+    <string name="by_apk_hash">Hash de APK</string>
     <string name="by_signing_certificate">Certificado firmante</string>
     <string name="open_in_browser">Abrir en el navegador</string>
     <string name="share">Compartir</string>
@@ -22,21 +16,20 @@
     <string name="save">Guardar…</string>
     <string name="save_cert_using">Guardar certificado usando:</string>
     <string name="generate_pin">Generar Pin</string>
-    <string name="package_name">Nombre del paquete:</string>
-    <string name="apk_path">Ruta del APK:</string>
-    <string name="public_apk_path">Ruta pública del APK:</string>
+    <string name="package_name">Nombre de paquete:</string>
+    <string name="apk_path">Ruta de APK:</string>
+    <string name="public_apk_path">Ruta pública de APK:</string>
     <string name="data_directory">Directorio de datos:</string>
     <string name="key_type">Tipo de clave:</string>
     <string name="signature_type">Tipo de firma:</string>
-    <string name="target_sdk_version">Versión del SDK objetivo:</string>
+    <string name="target_sdk_version">Versión de SDK objetivo:</string>
     <string name="version">Versión:</string>
-    <string name="created">Creado:</string>
-    <string name="expires">Caduca:</string>
+    <string name="created">Creación:</string>
+    <string name="expires">Caducidad:</string>
     <string name="subject">Asunto:</string>
-    <string name="issuer">Emisor:</string>
-    <string name="serial">Número de serie:</string>
+    <string name="issuer">Distribuidor:</string>
+    <string name="serial">N.º serie:</string>
     <!--error messages-->
-    <string name="error_cannot_make_fingerprint">¡No se pudo crear huella de validación del certificado firmante!
-    </string>
-    <string name="error_no_app_entry">¡No se encontró ninguna entrada de aplicación!</string>
+    <string name="error_cannot_make_fingerprint">No se puede crear una huella del certificado de firma.</string>
+    <string name="error_no_app_entry">No se encontró ninguna entrada de aplicación.</string>
 </resources>
