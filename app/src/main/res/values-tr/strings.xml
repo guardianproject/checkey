@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Checkey</string>
     <string name="app_description">Checkey telefonunuzda yüklü olan APK\'lar hakkında bilgi sahibi olmanıza yarayan
@@ -7,10 +7,10 @@
         adreslerine bağlantılar sunar. Ayrıca TrustedIntents kütüphanesinde kullanabilmeniz için imzalama
         sertifikalarını dışa aktararak ApkSignaturePin pin dosyaları oluşturmanıza olanak sağlar.
     </string>
-    <string name="icon">ikon</string>
+    <string name="icon">simge</string>
     <string name="action_settings">Ayarlar</string>
     <string name="no_applications_found">Hiç uygulama bulunamadı</string>
-    <string name="details">Ayrıntılar:</string>
+    <string name="details">Ayrıntılar</string>
     <string name="virustotal">VirusTotal</string>
     <string name="by_package_name">Paket İsmi</string>
     <string name="by_apk_hash">APK Hash</string>
