@@ -2,7 +2,7 @@ Checkey é um utilitário para obter informação sobre as APKs que estão insta
 
 ★ NÓS FALAMOS O SEU IDIOMA: Checkey está disponível para os amigos que falam: Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe
 Não vê o seu idioma? Junte-se a nós e ajude a traduzir a app:
-https://www.transifex.com/projects/p/checkey
+https://hosted.weblate.org/translate/guardianproject/
 
 ***Saiba Mais***
 ★ SOBRE NÓS: Guardian Project é um grupo de responsáveis pelo desenvolvimento que cria apps móveis seguras e de código aberto para um futuro melhor.

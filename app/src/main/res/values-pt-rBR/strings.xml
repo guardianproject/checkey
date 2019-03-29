@@ -1,2 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Checkey</string>
+    <string name="icon">ícone</string>
+    <string name="action_settings">Configurações</string>
+    <string name="no_applications_found">Nenhum aplicativo encontrado</string>
+    <string name="details">Detalhes</string>
+    <string name="virustotal">VirusTotal</string>
+    <string name="by_package_name">Nome do pacote</string>
+    <string name="by_apk_hash">Hash da APK</string>
+    <string name="by_signing_certificate">Certificado de assinatura</string>
+    <string name="open_in_browser">Abrir no navegador</string>
+    <string name="share">Compartilhar</string>
+    <string name="share_url_using">Compartilhar URL usando:</string>
+    <string name="save">Salvar…</string>
+    <string name="save_cert_using">Salvar certificado usando:</string>
+    <string name="generate_pin">Gerar PIN</string>
+    <string name="package_name">Nome do pacote:</string>
+    <string name="apk_path">Caminho do APK:</string>
+    <string name="public_apk_path">Caminho do APK público:</string>
+    <string name="data_directory">Diretoria dos dados:</string>
+    <string name="key_type">Tipo de chave:</string>
+    <string name="signature_type">Tipo de assinatura:</string>
+    <string name="target_sdk_version">Versão SDK alvo:</string>
+    <string name="version">Versão:</string>
+    <string name="created">Criado:</string>
+    <string name="expires">Expira:</string>
+    <string name="subject">Assunto:</string>
+    <string name="issuer">Emissor:</string>
+    <string name="serial">Nº de série:</string>
+    <string name="error_no_app_entry">Não foi encontrada nenhuma entrada de app!</string>
+</resources>
