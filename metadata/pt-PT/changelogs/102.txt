@@ -1,0 +1,4 @@
++ simplificar visão geral e "vista detalhada"
++ correção de todos os erros de crachar
++ adicionar traduções: pt_PT ru sl
++ atualizar traduções: de fi ja nb
