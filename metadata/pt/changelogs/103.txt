@@ -1,0 +1,3 @@
++ compilação reprodutível
++ adicionar traduções: fa fr zh-CN
++ atualizar traduções: de pt_PT tr
