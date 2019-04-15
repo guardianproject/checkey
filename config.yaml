@@ -1,0 +1,55 @@
+title: Checkey
+theme: fastlane-hugo-theme
+baseURL: http://localhost:1313
+
+contentDir: metadata
+
+staticDir:
+  - app/src/main/res
+
+blackfriday:
+  extensions:
+    - hardLineBreak
+
+params:
+  fastlaneDir: metadata
+  googleplay: info.guardianproject.checkey
+  fdroid: info.guardianproject.checkey
+  github: guardianproject/checkey
+  gitlab: guardianproject/checkey
+  header_heading_color: "#ffa"
+  section_headings_color: "#777"
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+languages:
+  az:
+    languageCode: az
+  el:
+    languageCode: el
+  en:
+    languageCode: en-US
+  es:
+    languageCode: es
+  fi:
+    languageCode: fi
+  ja:
+    languageCode: ja
+  ko:
+    languageCode: ko
+  nb:
+    languageCode: nb
+  "no":
+    languageCode: "no"
+  pt:
+    languageCode: pt-PT
+  pt-BR:
+    languageCode: pt-PT
+  ru:
+    languageCode: ru
+  sl:
+    languageCode: sl
+  tr:
+    languageCode: tr
+  zh-CN:
+    languageCode: zh-CN

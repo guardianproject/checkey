@@ -11,3 +11,8 @@
 /build/
 /tmp/
 /unsigned/
+
+# Hugo
+/public/
+/resources/
+

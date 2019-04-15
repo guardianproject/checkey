@@ -9,15 +9,17 @@ stages:
   - test
   - deploy
 
-before_script:
-  - export GRADLE_USER_HOME=$PWD/.gradle
-  - export ANDROID_COMPILE_SDK=`sed -n 's,.*compileSdkVersion\s*\([0-9][0-9]*\).*,\1,p' app/build.gradle`
-  - alias sdkmanager="sdkmanager --no_https"
-  - echo y | sdkmanager "platforms;android-${ANDROID_COMPILE_SDK}" > /dev/null
-  - apt-get update
-  - apt-get -qy install gradle --no-install-recommends
+.android-template: &android-template
+  before_script:
+    - export GRADLE_USER_HOME=$PWD/.gradle
+    - export ANDROID_COMPILE_SDK=`sed -n 's,.*compileSdkVersion\s*\([0-9][0-9]*\).*,\1,p' app/build.gradle`
+    - alias sdkmanager="sdkmanager --no_https"
+    - echo y | sdkmanager "platforms;android-${ANDROID_COMPILE_SDK}" > /dev/null
+    - apt-get update
+    - apt-get -qy install gradle --no-install-recommends
 
 .test-template: &test-template
+  <<: *android-template
   stage: test
   artifacts:
     name: "${CI_PROJECT_PATH}_${CI_JOB_STAGE}_${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHA}"
@@ -97,7 +99,33 @@ connected 22 default armeabi-v7a:
   <<: *test-template
   <<: *connected-template
 
+website:
+  stage: test
+  except:
+    - master
+  image: debian:buster-slim
+  script:
+    - apt-get update
+    - apt-get -qy install --no-install-recommends hugo
+    - sed -i "s,^baseURL\x3a.*,baseURL\x3a https://${CI_PROJECT_NAMESPACE}.gitlab.io/${CI_PROJECT_NAME}/," config.yaml
+    - hugo
+
+pages:
+  stage: deploy
+  only:
+    - master
+  image: debian:buster-slim
+  artifacts:
+    paths:
+      - public
+  script:
+    - apt-get update
+    - apt-get -qy install --no-install-recommends hugo
+    - sed -i "s,^baseURL\x3a.*,baseURL\x3a https://${CI_PROJECT_NAMESPACE}.gitlab.io/${CI_PROJECT_NAME}/," config.yaml
+    - hugo
+
 deploy_nightly:
+  <<: *android-template
   stage: deploy
   only:
     - master
