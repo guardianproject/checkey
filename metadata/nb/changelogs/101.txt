@@ -1,0 +1,3 @@
++ Oversettelser lagt til: de es fi ja ko nb tr
++ Gjentagbar byggeprosess
++ Støtte for Android 7 fikser kræsj

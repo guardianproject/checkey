@@ -9,7 +9,7 @@ https://www.transifex.com/projects/p/checkey
 ***Lær mer***
 ★ OM OSS: Guardianprosjektet er en gruppe utviklere som lager sikre mobilprogrammer og friprog-kode for en bedre fremtid.
 ★ VÅR NETTSIDE: https://GuardianProject.info
-★ DESVERRE PÅ TWITTER: https://twitter.com/guardianproject
+★ DESSVERRE PÅ TWITTER: https://twitter.com/guardianproject
 ★ FRI PROGRAMVARE: Checkey er fri programvare. Du kan sjekke ut vår programkode, og bidra til den for å gjøre Checkey enda bedre:
 https://github.com/guardianproject/checkey
 ★ TILBAKEMELDINGER: Mangler vi din favorittfunksjonalitet? Har du funnet en irriterende feil. Fortell oss om det! Vi elsker å lytte til god kritikk. Send oss en e-post support@guardianproject.info eller finn oss i vår sludrekanal https://guardianproject.info/contact

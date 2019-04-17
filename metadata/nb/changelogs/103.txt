@@ -1,0 +1,3 @@
++ Gjentagbar byggeprosess
++ Oversettelser lagt til: fa fr zh-CN
++ Oppdaterte oversettelser: de pt_PT tr

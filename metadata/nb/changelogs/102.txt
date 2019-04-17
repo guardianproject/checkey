@@ -1,0 +1,4 @@
++ Forenklet oversikt og "detaljvisning" lagt til
++ Fiks for alle kjente kræsj
++ Oversettelser lagt til: pt_PT ru sl
++ Oppdaterte oversettelser: de fi ja nb
