@@ -9,5 +9,5 @@ https://hosted.weblate.org/translate/guardianproject/
 ★ O NOSSO SÍTIO DA WEB: https://GuardianProject.info
 ★ NO TWITTER: https://twitter.com/guardianproject
 ★ PROGRAMA LIVRE: Checkey é um programa gratuito. Pode dar uma vista de olhos no nosso código aberto, ou contribuir para ajudar a tornar Checkey ainda melhor:
-https://github.com/guardianproject/checkey
+https://gitlab.com/guardianproject/checkey
 ★ ENVIE-NOS UMA MENSAGEM: Nós estamos a perder a sua função favorita? Encontrou um bug aborrecido? Por favor, diga-nos! Nós gostaríamos de o ouvir. Envie-nos uma mensagem: support@guardianproject.info ou encontre-nos na nossa sala de conversação em https://guardianproject.info/contact

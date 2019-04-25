@@ -4,12 +4,13 @@ Deutsch, English, español, suomi, 日本語, 한국어, Norsk bokmål, portugu�
 
 (Tysk, Engelsk, Spansk, Finsk, Japansk, Koreansk, Norsk bokmål, Portugisisk (Portugal), Russisk, Slovensk, Tyrkisk)
 Mangler ditt språk? Hjelp oss å oversette programmet:
-https://www.transifex.com/projects/p/checkey
+https://hosted.weblate.org/projects/guardianproject/checkey/
+https://hosted.weblate.org/projects/guardianproject/checkey-metadata/
 
 ***Lær mer***
 ★ OM OSS: Guardianprosjektet er en gruppe utviklere som lager sikre mobilprogrammer og friprog-kode for en bedre fremtid.
 ★ VÅR NETTSIDE: https://GuardianProject.info
 ★ DESSVERRE PÅ TWITTER: https://twitter.com/guardianproject
 ★ FRI PROGRAMVARE: Checkey er fri programvare. Du kan sjekke ut vår programkode, og bidra til den for å gjøre Checkey enda bedre:
-https://github.com/guardianproject/checkey
+https://gitlab.com/guardianproject/checkey
 ★ TILBAKEMELDINGER: Mangler vi din favorittfunksjonalitet? Har du funnet en irriterende feil. Fortell oss om det! Vi elsker å lytte til god kritikk. Send oss en e-post support@guardianproject.info eller finn oss i vår sludrekanal https://guardianproject.info/contact

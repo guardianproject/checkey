@@ -2,12 +2,13 @@
 ★ MIΛAME TH ΓΛΩΣΣΑ σας: Το Checkey είναι διαθέσιμο για φίλους που μιλούν:
 Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe
 Δεν βλέπετε τη γλώσσα σας; Γίνετε μέλος και βοηθήστε στη μετάφραση της εφαρμογής:
-https://www.transifex.com/projects/p/checkey
+https://hosted.weblate.org/projects/guardianproject/checkey/
+https://hosted.weblate.org/projects/guardianproject/checkey-metadata/
 
 ***Μάθετε Περισσότερα***
 ★ ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ: Το Guardian Project είναι μια ομάδα δημιουργών που κάνουν ασφαλείς εφαρμογές για κινητά και open-source κώδικα για ένα καλύτερο αύριο
 ★ Η ΙΣΤΟΣΕΛΙΔΑ ΜΑΣ: https://GuardianProject.info
 ★ ΣΤΟ TWITTER: https://twitter.com/guardianproject
 ★ ΕΛΕΥΘΕΡΟ ΛΟΓΙΣΜΙΚΟ: Το Checkey είναι ελεύθερο λογισμικό. Μπορείτε να ρίξτε μια ματιά στον πηγαίο κώδικα μας ή γίνετε μέλος της κοινότητάς μας για να κάνουμε το Checkey ακόμα καλύτερο:
-https://github.com/guardianproject/checkey
+https://gitlab.com/guardianproject/checkey
 ★ ΣΤΕΙΛΤΕ ΜΑΣ ΜΗΝΥΜΑ: Μας λείπει το αγαπημένο σας χαρακτηριστικό; Βρήκατε ένα ενοχλητικό σφάλμα; Πείτε μας! Θα θέλαμε να σας ακούσουμε. Στείλτε μας ένα μήνυμα στο: support@guardianproject.info ή βρείτε μας στο chat room https://guardianproject.info/contact

@@ -2,12 +2,13 @@ Checkey は、お使いのデバイスにインストールされている APK �
 ★ あなたの言語でお使いいただけます: Checkey は次の言語を話す友だちが利用できます:
 Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe
 あなたの言語が見つかりませんか? 私たちに参加して、アプリの翻訳を支援してください:
-https://www.transifex.com/projects/p/checkey
+https://hosted.weblate.org/projects/guardianproject/checkey/
+https://hosted.weblate.org/projects/guardianproject/checkey-metadata/
 
 ***さらに詳しく***
 ★ 私たちについて: Guardian Project は、より良い明日のために、安全なモバイル アプリやオープン ソース コードを作る開発者のグループです
 ★ WEBサイト: https://GuardianProject.info
 ★ TWITTER: https://twitter.com/guardianproject
 ★ フリーソフトウェア: Checkey はフリーソフトウェアです。私たちのソースコードを見たり、Checkey をさらに良くする手助けに貢献することができます:
-https://github.com/guardianproject/checkey
+https://gitlab.com/guardianproject/checkey
 ★ 私たちにメッセージをお送りください: あなたのお気に入りの機能が不足していませんか? 迷惑なバグを発見されましたか? ご連絡ください! 私たちはあなたのご意見をお待ちしています。私たちにメールをお送りください: support@guardianproject.info または私たちのチャットルーム https://guardianproject.info/contact から

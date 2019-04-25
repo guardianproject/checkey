@@ -1,9 +1,10 @@
 Checkey ist eine öffentliche Dienstleistung um Informationen über Anwendungen die auf deinem Gerät installiert sind, zu bekommen. Beginne mit einer Liste mit allen Apps die du auf deinem Gerät installiert hast, es zeigt sich dir die Applikations Signatur mit einer einfachen Berührung und bietet Links zu virustotal.com und androidobservatery,org um einfachen Zugriff auf die Profile der Applikation zu bekommen. Es erlaubt dir außerdem das signierte Zertifikat zu exportieren und einen Applikations Signatur Pin zu erzeugen für die Verwendung mit der TrustedIntends Bücherei.
 Wir s
 Du siehst deine Sprache nicht? Schließe dich uns an und übersetze die App:
-https://www.transifex.com/projects/p/checkey
+https://hosted.weblate.org/projects/guardianproject/checkey/
+https://hosted.weblate.org/projects/guardianproject/checkey-metadata/
 
 ***Erfahren Sie mehr***
 ★ UNSERE WEBSEITE: https://GuardianProject.info
 ★ AUF TWITTER: https://twitter.com/guardianproject
-https://github.com/guardianproject/checkey
+https://gitlab.com/guardianproject/checkey

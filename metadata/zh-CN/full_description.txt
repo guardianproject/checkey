@@ -2,12 +2,13 @@ Checkey 是一个获得已安装 APK 相关信息的实用工具。它从您的�
 ★ Checkey 支持下列语言：
 Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe
 没看到您的语言？帮忙翻译本应用吧：
-https://www.transifex.com/projects/p/checkey
+https://hosted.weblate.org/projects/guardianproject/checkey/
+https://hosted.weblate.org/projects/guardianproject/checkey-metadata/
 
 ***详细了解***
 ★ 关于我们：Guardian 项目是一个开发者小组，致力于创造移动应用和开源代码的美好明天
 ★ 我们的网站: https://GuardianProject.info
 ★ 我们的 Twitter: https://twitter.com/guardianproject
 ★ 自由软件：Checkey 是自由软件。您可以查看我们的源代码，还可以帮助我们让 Checkey 变得更好：
-https://github.com/guardianproject/checkey
+https://gitlab.com/guardianproject/checkey
 ★ 致用户：我们还缺少你喜欢的功能？发现了一个 bug？请告诉我们！我们乐于听取您的意见。请发送电子邮件至: support@guardianproject.info 或者加入我们的聊天室 https://guardianproject.info/contact

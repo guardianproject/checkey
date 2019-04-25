@@ -2,12 +2,13 @@ Checkey alətinizə yüklədiyiniz tətbiqetmələrinin APK-sı haqda məlumatla
 ★ SİZİN DİLİNİZDƏ DANIŞIRIQ: bu dilləri bilən dostlar üçün əlçatımlıdır:
 Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe
 Öz dilinizi tapmadınız? Bizə qoşul və tətbiqetməni tərcümə et:
-https://www.transifex.com/projects/p/checkey
+https://hosted.weblate.org/projects/guardianproject/checkey/
+https://hosted.weblate.org/projects/guardianproject/checkey-metadata/
 
 ***Ətraflı***
 ★ HAQQIMIZDA: Guardian Project təhlükəsiz mobil tətbiqetmələr və açıq kodların yaxşı gələcək üçün yaradan proqramçılar qrupudur
 ★ SAYTIMIZ: https://GuardianProject.info
 ★ TWITTER-də: https://twitter.com/guardianproject
 ★ PULSUZ PROQRAM: Checkey Pulsuz proqramdır. Siz mənbə kodumuza baxa bilər və ya Checkey-i daha yaxşı etmək üçün kömək edə bilərsiniz:
-https://github.com/guardianproject/checkey
+https://gitlab.com/guardianproject/checkey
 ★ BİZƏ YAZIN: İstədiyiniz imkanı tapa bilmədiniz? Zəhlətökən xəta tapdınız? Zəhmət olmasa, bizə deyin! Sizi eşitməkdən şad olarıq. Bizə email göndərin: support@guardianproject.info və ya çat otağında bizi tapın https://guardianproject.info/contact

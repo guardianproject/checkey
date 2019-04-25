@@ -9,7 +9,8 @@ pin de ApkSignaturePin para su uso con la librería TrustedIntents.
 ★ HABLAMOS SU IDIOMA: Checkey está disponible para los amigos que hablan: Deutsch, English, español, suomi, 日本語, 한국어, Norsk, Türkçe
 
 ¿No ve su idioma? Únase a nosotros y ayude a traducir la aplicación:
-https://www.transifex.com/projects/p/checkey
+https://hosted.weblate.org/projects/guardianproject/checkey/
+https://hosted.weblate.org/projects/guardianproject/checkey-metadata/
 
 
 ***Aprenda más***
@@ -27,7 +28,7 @@ mañana
 
 ★ SOFTWARE LIBRE: Checkey es software libre. Puede echar un vistazo a 
 nuestro código fuente, o contribuir a hacer Checkey incluso mejor:
-https://github.com/guardianproject/checkey
+https://gitlab.com/guardianproject/checkey
 
 ★ ENVÍENOS UN MENSAJE: ¿Nos hemos olvidado de su característica favorita? 
 ¿Encontró algún fallo molesto? ¡Por favor cuéntenoslo! Nos encantará 

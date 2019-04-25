@@ -2,12 +2,13 @@ Checkey on apuohjelma, jolla saa tietoja laiteeseen asennetuista APK-pakkaustied
 ★ PUHUMME KIELTÄSI: Checkey on saataville ystäville, jotka puhuvat seuraavia kieliä:
 Deutsch, English, español, suomi, 日本語, 한국어, Norsk, português (Portugal), Русский, Slovenščina, Türkçe
 Etkö näe kieltäsi? Liity meihin ja auta sovelluksen kotoistamisessa:
-https://www.transifex.com/projects/p/checkey
+https://hosted.weblate.org/projects/guardianproject/checkey/
+https://hosted.weblate.org/projects/guardianproject/checkey-metadata/
 
 ***Opi lisää***
 ★ TIETOA MEISTÄ: Guardian Project on kehittäjien ryhmä, joka tekee turvallisia mobiilisovelluksia ja avointa lähdekoodia parempaa huomista varten
 ★ WEBBISIVUMME: https://GuardianProject.info
 ★ TWITTERISSÄ: https://twitter.com/guardianproject
 ★ ILMAINEN OHJELMA: Checkey on ilmainen ohjelma. Voit vilkaista lähdekoodia tai avustaa Checkey-ohjelman tekemiseksi vielä paremmaksi:
-https://github.com/guardianproject/checkey
+https://gitlab.com/guardianproject/checkey
 ★ VIESTITÄ MEILLE: Kaipaatko suosikkiominaisuuttasi? Löysitkö harmillisen ohjelmointivirheen? Kerro meille! Kuulemme sinusta mielellään. Lähetä meille sähköpostia: support@guardianproject.info tai etsi meidät juttelukanavalla https://guardianproject.info/contact
